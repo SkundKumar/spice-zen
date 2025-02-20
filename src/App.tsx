@@ -5,9 +5,34 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
-
+  const [language, setLanguage] = useState<'en' | 'jp'>('en');
   const heroRef = useRef<HTMLElement>(null);
   const menuRef = useRef<HTMLElement>(null);
+
+  const translations = {
+    en: {
+      title: "Spice & Zen",
+      subtitle: "Where Indian Flavors Meet Japanese Elegance",
+      exploreMenu: "Explore Menu",
+      visitUs: "Visit Us",
+      address: "1-2-3 Shibuya, Tokyo, Japan 150-0002",
+      connect: "Connect With Us",
+      toggleLanguage: "日本語",
+    },
+    jp: {
+      title: "スパイス＆禅",
+      subtitle: "インドの味と日本の優雅さの融合",
+      exploreMenu: "メニューを見る",
+      visitUs: "お店に行く",
+      address: "東京都渋谷区1-2-3 150-0002",
+      connect: "お問い合わせ",
+      toggleLanguage: "English",
+    },
+  };
+
+  const toggleLanguage = () => {
+    setLanguage((prev) => (prev === 'en' ? 'jp' : 'en'));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,13 +107,15 @@ function App() {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold gradient-text">Spice & Zen</div>
+          
+          <div className="text-2xl font-bold gradient-text">{translations[language].title}</div>
+          
           <div className="hidden md:flex space-x-8">
             {['home', 'menu', 'contact'].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
-                className={`relative text-gray-700 hover:text-orange-600 transition-colors duration-300 ${
+                className={`relative text-white hover:text-orange-600 transition-colors duration-300 ${
                   isScrolled ? 'text-gray-700' : 'text-white'
                 } ${activeSection === section ? 'text-orange-600' : ''}`}
               >
@@ -99,6 +126,12 @@ function App() {
               </button>
             ))}
           </div>
+          <button
+            onClick={toggleLanguage}
+            className="px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition"
+          >
+            {translations[language].toggleLanguage}
+          </button>
         </div>
       </div>
     </nav>
@@ -118,12 +151,12 @@ function App() {
             <div className="relative inline-block">
               <Sparkles className="absolute -top-8 -left-8 w-6 h-6 text-orange-400 floating" />
               <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">
-                Spice & Zen
+              {translations[language].title}
               </h1>
               <Sparkles className="absolute -bottom-8 -right-8 w-6 h-6 text-orange-400 floating" />
             </div>
             <p className="text-xl md:text-3xl text-white mb-8 font-light">
-              Where Indian Flavors Meet Japanese Elegance
+              {translations[language].subtitle}
             </p>
             <button 
               onClick={() => scrollToSection('menu')}
