@@ -146,7 +146,7 @@ const Home = () => {
       <section id="home" ref={heroRef} className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://lh5.googleusercontent.com/VXjZuFczQeWo_iMNUQ95jV5mptzbswTka5DlE0-ItCZAXP7fNKoTuoQT5u3ZMaKh8RReiTTzmkHbBv_EE8eSvnQ" 
+            src="https://lh3.googleusercontent.com/fD65IKqwTsYKp_S8qZ-NB_CIFo1zqYqn32JNhkuFC7atwasYW7d9Lx9LMmNEh6WwSsKKZaaPnxO6bZWvxb2CaPI" 
             alt="Restaurant interior" 
             className="w-full h-full object-cover"
           />
