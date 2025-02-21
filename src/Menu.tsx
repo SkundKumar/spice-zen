@@ -14,6 +14,7 @@ interface MenuItem {
   image: string;
   featured?: boolean;
   size?: 'small' | 'medium' | 'large';
+  mobsize?: 'small' | 'medium' | 'large';
 }
 
 const menuItems: MenuItem[] = 
@@ -25,7 +26,8 @@ const menuItems: MenuItem[] =
       category: { en: "Main Course", jp: "メイン" },
       image: "https://i.pinimg.com/736x/a4/66/9a/a4669a419a1d51fc927182f6660bfb3e.jpg",
       featured: true,
-      size: "small"
+      size: "small",
+      mobsize: "medium"
     },
     {
       name: { en: "Mango Lassi", jp: "マンゴーラッシー" },
@@ -33,7 +35,9 @@ const menuItems: MenuItem[] =
       price: "$10",
       category: { en: "Beverage", jp: "飲み物" },
       image: "https://imgs.search.brave.com/JVDwGefljnqj7a_EexU0Acx8qFshOrYYuN4qYB_lFIM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA2LzYzLzk1Lzc5/LzM2MF9GXzY2Mzk1/Nzk5OV9FOW9MVnEw/akt4UHEwMFJ5SGFB/SGt5ZW9oM1FmakVo/eC5qcGc",
-      size: "small"
+      size: "small",
+      mobsize: "large"
+    
     },
     {
       name: { en: "Gulab Jamun", jp: "グラブジャムン" },
@@ -41,7 +45,9 @@ const menuItems: MenuItem[] =
       price: "$15",
       category: { en: "Dessert", jp: "デザート" },
       image: "https://imgs.search.brave.com/kv_PVqd8PO8JggEDOBDl4LAueYJdHgHlWbfkXBBCmNY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA5LzE0LzY0LzYy/LzM2MF9GXzkxNDY0/NjI3M19Xcmh1Y0Vj/MFRLU1ZXUXhyeWlI/ekltNjZ3Mk0xRmhI/YS5qcGc",
-      size: "small"
+      size: "small",
+      
+     
     },
     {
       name: { en: "Tandoori Platter", jp: "タンドリープラッター" },
@@ -50,7 +56,8 @@ const menuItems: MenuItem[] =
       category: { en: "Appetizer", jp: "前菜" },
       image: "https://imgs.search.brave.com/1bYy7osK4iKzTdbHtdI7mvIYahoVY812wNFJCcc7sik/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzM5LzMwLzE4/LzM2MF9GXzEzOTMw/MTgxOV9JcDFXTUlI/TGM2dnRGamtYTmt1/aGlWdzNGcWFYVVp5/ZC5qcGc",
       featured: true,
-      size: "medium"
+      size: "medium",
+      
     },
     {
       name: { en: "Butter Chicken", jp: "バターチキン" },
@@ -58,7 +65,8 @@ const menuItems: MenuItem[] =
       price: "$35",
       category: { en: "Main Course", jp: "メイン" },
       image: "https://imgs.search.brave.com/mMs3b2YFe4us1A1GSP2hAcxXcDZ2_dm3vLzKTUdr_oQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA5LzE0LzY0LzQz/LzM2MF9GXzkxNDY0/NDM1Ml8zTHVjWE5i/cEtQMGEwcG5ZY1Jn/QnY0U2JRd29PbGpX/di5qcGc",
-      size: "small"
+      size: "small",
+      
     },
     {
       name: { en: "Paneer Tikka", jp: "パニールティッカ" },
@@ -66,7 +74,10 @@ const menuItems: MenuItem[] =
       price: "$30",
       category: { en: "Appetizer", jp: "前菜" },
       image: "https://imgs.search.brave.com/bvlZpQAIsOIZBvaGS7sQDjU5btatsDDmaN7mKgNbw1A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA4LzI0LzM1LzYx/LzM2MF9GXzgyNDM1/NjE1Ml95bkRCMTRK/MHFZejhERU5DWG9S/cTZ3SVJCYWxHSm9s/RC5qcGc",
-      size: "small"
+      size: "small",
+      mobsize: "large"
+      
+
     },
     {
       name: { en: "Mango Lassi", jp: "マンゴーラッシー" },
@@ -74,7 +85,8 @@ const menuItems: MenuItem[] =
       price: "$10",
       category: { en: "Beverage", jp: "飲み物" },
       image: "https://imgs.search.brave.com/oP2sBqIybLcrdrwCJ3jqOUKqVS_G_oXAcURth_FIzBc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzEwLzk0LzczLzM3/LzM2MF9GXzEwOTQ3/MzM3NDFfcjBYbWhj/b2EwdWUwN0o5YnJ1/bVRlZHZsQ1l6VHZ2/c0YuanBn",
-      size: "medium"
+      size: "medium",
+      
     },
     {
       name: { en: "Gulab Jamun", jp: "グラブジャムン" },
@@ -82,7 +94,8 @@ const menuItems: MenuItem[] =
       price: "$15",
       category: { en: "Dessert", jp: "デザート" },
       image: "https://imgs.search.brave.com/3yqpGIBECHuOr_7gq0kTKMBHtuX1i5qR4TxlpP7XnN4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzk5LzEw/LzEyLzk5MTAxMjBi/YWY5ZmVhOWU4YmVj/MDUzYTk2NGRkYTZi/LmpwZw",
-      size: "small"
+      size: "small",
+      mobsize: "medium"
     },
     {
       name: { en: "Masala Dosa", jp: "マサラドーサ" },
@@ -163,49 +176,56 @@ function Menu() {
         </motion.header>
   
         <main className="container mx-auto max-w-7xl px-6 py-12">
-          <div 
-            ref={gridRef}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[300px]"
-          >
-            {menuItems.map((item, index) => (
-              <div
-                key={item.name.en}
-                ref={el => cardsRef.current[index] = el}
-                className={`
-                    group relative rounded-2xl overflow-hidden bg-orange-100/50 backdrop-blur-lg shadow-lg hover:shadow-2xl transition-all duration-700 ease-out hover:scale-[0.03] hover:-translate-y-1 
-                   
-                    ${item.size === 'medium' ? 'sm:col-span-2 sm:row-span-1' : ''}
-                    ${item.size === 'large' ? 'sm:col-span-2 sm:row-span-2' : ''}
-                  `}
-              >
-                <div 
-                  className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-                />
-                <img
-                  src={item.image}
-                  alt={item.name[language]}
-                  className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
-                />
-                <div 
-                  className="absolute inset-x-0 bottom-0 p-6 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-out"
-                >
-                  <div className="flex justify-between items-start gap-2 mb-2">
-                    <h3 className="text-xl font-semibold text-white leading-tight">
-                      {item.name[language]}
-                    </h3>
-                    <span className="text-yellow-400 font-bold text-lg">{item.price}</span>
-                  </div>
-                  <p className="text-gray-200 text-sm leading-relaxed mb-3 line-clamp-2">
-                    {item.description[language]}
-                  </p>
-                  <span className="inline-block text-xs text-orange-400 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1 border border-orange-400/30">
-                    {item.category[language]}
-                  </span>
-                </div>
-              </div>
-            ))}
+  <div 
+    ref={gridRef}
+    className="
+      grid grid-cols-2 gap-3 auto-rows-[200px] 
+      sm:grid-cols-2 sm:auto-rows-[300px] 
+      md:grid-cols-2 lg:grid-cols-2
+    "
+  >
+    {menuItems.map((item, index) => (
+      <div
+        key={item.name.en}
+        ref={el => cardsRef.current[index] = el}
+        className={`
+            group relative rounded-2xl overflow-hidden bg-orange-100/50 backdrop-blur-lg shadow-lg hover:shadow-2xl transition-all duration-500 ease-out 
+            ${item.size === 'medium' ? 'md:col-span-2 lg:col-span-2' : ''}
+${item.size === 'large' ? 'md:col-span-2 lg:col-span-2 md:row-span-2' : ''}
+${item.mobsize === 'medium' ? 'sm:col-span-2 sm:row-span-1 md:col-span-1 md:row-span-1' : ''}
+${item.mobsize === 'large' ? 'sm:col-span-2 sm:row-span-2 md:col-span-1 md:row-span-1' : ''}
+
+          `}
+      >
+        <div 
+          className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+        />
+        <img
+          src={item.image}
+          alt={item.name[language]}
+          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+        />
+        <div 
+          className="absolute inset-x-0 bottom-0 p-4 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out"
+        >
+          <div className="flex justify-between items-start gap-2 mb-2">
+            <h3 className="text-lg font-semibold text-white leading-tight">
+              {item.name[language]}
+            </h3>
+            <span className="text-yellow-400 font-bold text-md">{item.price}</span>
           </div>
-        </main>
+          <p className="text-gray-200 text-sm leading-relaxed mb-2 line-clamp-2">
+            {item.description[language]}
+          </p>
+          <span className="inline-block text-xs text-orange-400 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1 border border-orange-400/30">
+            {item.category[language]}
+          </span>
+        </div>
+      </div>
+    ))}
+  </div>
+</main>
+
       </div>
     );
   }
