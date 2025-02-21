@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 interface MenuItem {
   name: { en: string; jp: string; };
   description: { en: string; jp: string; };
-  price: string;
+  
   category: { en: string; jp: string; };
   image: string;
   featured?: boolean;
@@ -20,19 +20,19 @@ interface MenuItem {
 const menuItems: MenuItem[] = 
 [
     {
-      name: { en: "Main Course", jp: "ビリヤニ ロイヤル" },
-      description: { en: "Aromatic basmati rice with saffron, slow-cooked spices, and tender meat", jp: "サフランとスパイスでじっくり調理した香り高いバスマティ米" },
-      price: "$40",
-      category: { en: "Main Course", jp: "メイン" },
-      image: "https://i.pinimg.com/736x/a4/66/9a/a4669a419a1d51fc927182f6660bfb3e.jpg",
+      name: { en: "Starters and Snacks", jp: "ビリヤニ ロイヤル" },
+      description: { en: "a light snack", jp: "" },
+      
+      category: { en: "Starters", jp: "" },
+      image: "https://imgs.search.brave.com/D5ZDJoopf8ItiLVL3P1GQgLMaUKl7puqi4IoiIgMV_8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzdiLzA3/LzRiLzdiMDc0YmMz/OTdiNTE2Y2ZkMzdm/NDAyYWY0MDVkZDUx/LmpwZw",
       featured: true,
       size: "small",
       mobsize: "medium"
     },
     {
-      name: { en: "Beverage", jp: "マンゴーラッシー" },
-      description: { en: "Refreshing yogurt-based mango drink with cardamom", jp: "カルダモンが香る爽やかなヨーグルトベースのマンゴードリンク" },
-      price: "$10",
+      name: { en: "Drinks", jp: "ドリンク " },
+      description: { en: "Refreshing drink ", jp: "さわやかな飲み物" },
+      
       category: { en: "Beverage", jp: "飲み物" },
       image: "https://imgs.search.brave.com/JVDwGefljnqj7a_EexU0Acx8qFshOrYYuN4qYB_lFIM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA2LzYzLzk1Lzc5/LzM2MF9GXzY2Mzk1/Nzk5OV9FOW9MVnEw/akt4UHEwMFJ5SGFB/SGt5ZW9oM1FmakVo/eC5qcGc",
       size: "small",
@@ -40,40 +40,48 @@ const menuItems: MenuItem[] =
     
     },
     {
-      name: { en: "Dessert", jp: "グラブジャムン" },
-      description: { en: "Soft fried milk dumplings soaked in rose-flavored sugar syrup", jp: "ローズ風味のシロップに浸した柔らかい揚げミルク団子" },
-      price: "$15",
-      category: { en: "Dessert", jp: "デザート" },
-      image: "https://imgs.search.brave.com/kv_PVqd8PO8JggEDOBDl4LAueYJdHgHlWbfkXBBCmNY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA5LzE0LzY0LzYy/LzM2MF9GXzkxNDY0/NjI3M19Xcmh1Y0Vj/MFRLU1ZXUXhyeWlI/ekltNjZ3Mk0xRmhI/YS5qcGc",
+      name: { en: "Lunch Menu", jp: "グラブジャムン" },
+      description:{ en: "Lunch", jp: "昼ご飯 "},
+      
+      category: { en: "Lunch Menu", jp: "グラブジャムン" },
+      image: "https://imgs.search.brave.com/AEB4ELnk4eK4zZI4gdOCY2xwRWUwRszhYPcUrntqgeo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXMu/Y2xvdWRpbmFyeS5j/b20vaHozZ211cXc2/L2ltYWdlL3VwbG9h/ZC9jX2ZpbGwscV8z/MCx3Xzc1MC9mX2F1/dG8vdGstdHJhZGl0/aW9uYWwtaW5kaWFu/LWZvb2RzLXRvLXRh/c3RlLWluLTIwMjIt/cGhwRVhBWE5T",
       size: "small",
       
      
     },
     {
-      name: { en: "Appetizer", jp: "タンドリープラッター" },
+      name: { en: "Dinner", jp: "夕食" },
       description: { en: "Assortment of tandoori meats and vegetables, served with mint chutney", jp: "タンドリーミートと野菜の盛り合わせ、ミントチャツネ添え" },
-      price: "$50",
-      category: { en: "Appetizer", jp: "前菜" },
-      image: "https://imgs.search.brave.com/1bYy7osK4iKzTdbHtdI7mvIYahoVY812wNFJCcc7sik/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzM5LzMwLzE4/LzM2MF9GXzEzOTMw/MTgxOV9JcDFXTUlI/TGM2dnRGamtYTmt1/aGlWdzNGcWFYVVp5/ZC5qcGc",
+      
+      category: { en: "Dinner", jp: "夕食" },
+      image: "https://imgs.search.brave.com/px1fhRpd4iIWG4dh1UhpxXO0ba-yEMpEFXpSWAqaef8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9tYW55LWRpZmZl/cmVudC1kZWxpY2lv/dXMtZGlzaGVzLXRh/YmxlLXJlc3RhdXJh/bnRfMTI4NDQyLTI3/MC5qcGc_c2VtdD1h/aXNfaHlicmlk",
       featured: true,
       size: "medium",
       
     },
     {
-      name: { en: "South India", jp: "マサラドーサ" },
-      description: { en: "Crispy rice crepe filled with spiced potatoes, served with chutneys", jp: "スパイス風味のポテトを詰めたカリカリの米クレープ、チャツネ添え" },
-      price: "$25",
-      category: { en: "South Indian", jp: "南インド" },
-      image: "https://imgs.search.brave.com/hNJogRvrk0ia949nDS1k0K5XlH8Le9DeMfW3Q4qsWFk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzFkLzli/LzFjLzFkOWIxY2Fm/MjkwZGQ1MjVmMDNm/MzkyMWZhZTVjOWM0/LmpwZw",
+      name: { en: "Naan/Breads", jp: "ナン/パン" },
+      description: { en: "Crispy indian style breads", jp: "クリスピーなインド風パン" },
+      
+      category: { en: "Naan/Breads", jp: "ナン/パン" },
+      image: "https://lh6.googleusercontent.com/VEHbHCAZb7IvGMkzin6yH2YvXXqhT1mFqKA169fUFQMc1qyEvZ29r4HX2HDJTbJI2r9XtjM4HfKWscD9giEbURw",
       size: "small"
     },
     {
-      name: { en: "Vegetarian", jp: "ラジマチャワル" },
-      description: { en: "Slow-cooked red kidney beans with aromatic basmati rice", jp: "じっくり煮込んだレッドキドニービーンズと香り高いバスマティ米" },
-      price: "$20",
-      category: { en: "Vegetarian", jp: "ベジタリアン" },
-      image: "https://imgs.search.brave.com/x5ZcmKmzUUfE5kVCVR9evfAp_1aA6xLOJ4YHigzq3BI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGVhZm9ydHVybWVy/aWMuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDI0LzA0L1Jh/am1hLTEyLTcyOHgx/MDkyLmpwZw",
+      name: { en: "Biryani/Rice", jp: "ビリヤニ . ライス" },
+      description: { en: "Rice that has been stir-fried in a wok or a frying pan and is usually mixed with other ingredients such as eggs, vegetables, seafood, or meat", jp: "チャーハンは、中華鍋やフライパンで炒めたご飯に、卵、野菜、魚介類、肉などの他の材料を混ぜた料理です。" },
+      
+      category: { en: "Biryani", jp: "ベジタリアン" },
+      image: "https://i.pinimg.com/736x/a4/66/9a/a4669a419a1d51fc927182f6660bfb3e.jpg",
       size: "medium"
+    },
+    {
+      name: { en: "Special Meal Set", jp: "スペシャルミールセット" },
+      description: { en: "Slow-cooked red kidney beans with aromatic basmati rice", jp: "じっくり煮込んだレッドキドニービーンズと香り高いバスマティ米" },
+      
+      category: { en: "Special", jp:"スペシャルミールセット" },
+      image: "https://lh3.googleusercontent.com/KUa68hNhPNCE91uR3hVT44NzWSiiVry-V7YTxcagD0QLCbM7fdnMm1UG74tmOoUsoLQNLFG-Mz0RVw2p8_uS0-k",
+      size: "small"
     }
   ];
 
@@ -168,7 +176,7 @@ ${item.mobsize === 'large' ? 'sm:col-span-2 sm:row-span-2 md:col-span-1 md:row-s
             <h3 className="text-lg font-semibold text-white leading-tight">
               {item.name[language]}
             </h3>
-            <span className="text-yellow-400 font-bold text-md">{item.price}</span>
+            <span className="text-yellow-400 font-bold text-md">{}</span>
           </div>
           <p className="text-gray-200 text-sm leading-relaxed mb-2 line-clamp-2">
             {item.description[language]}
