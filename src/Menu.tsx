@@ -169,22 +169,33 @@ ${item.mobsize === 'large' ? 'sm:col-span-2 sm:row-span-2 md:col-span-1 md:row-s
           alt={item.name[language]}
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
-        <div 
-          className="absolute inset-x-0 bottom-0 p-4 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out"
-        >
-          <div className="flex justify-between items-start gap-2 mb-2">
-            <h3 className="text-lg font-semibold text-white leading-tight">
-              {item.name[language]}
-            </h3>
-            <span className="text-yellow-400 font-bold text-md">{}</span>
-          </div>
-          <p className="text-gray-200 text-sm leading-relaxed mb-2 line-clamp-2">
-            {item.description[language]}
-          </p>
-          <span className="inline-block text-xs text-orange-400 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1 border border-orange-400/30">
-            {item.category[language]}
-          </span>
-        </div>
+        {/* Always visible title on mobile */}
+<div 
+  className="absolute inset-x-0 bottom-0 p-4 z-20 bg-black/50 backdrop-blur-sm transition-all duration-500 ease-out"
+>
+  <h3 className="text-md font-semibold text-white leading-tight text-center">
+    {item.name[language]}
+  </h3>
+</div>
+
+{/* Hover effect for larger screens */}
+<div 
+  className="absolute inset-x-0 bottom-0 p-4 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out hidden sm:block"
+>
+  <div className="flex justify-between items-start gap-2 mb-2">
+    <h3 className="text-lg font-semibold text-white leading-tight">
+      {item.name[language]}
+    </h3>
+    <span className="text-yellow-400 font-bold text-md">{}</span>
+  </div>
+  <p className="text-gray-200 text-sm leading-relaxed mb-2 line-clamp-2">
+    {item.description[language]}
+  </p>
+  <span className="inline-block text-xs text-orange-400 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1 border border-orange-400/30">
+    {item.category[language]}
+  </span>
+</div>
+
       </div>
     ))}
   </div>
