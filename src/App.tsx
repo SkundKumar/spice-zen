@@ -5,6 +5,7 @@ import Menu from './Menu';
 import CategoryPage from './CatagoryPage';
 import MainCourse from './pages/MainCourse';
 import Biryani from './pages/Biryani';
+import Special from './pages/Special';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/category/main-course" element={<MainCourse />} />
         <Route path="/category/biryani" element={<Biryani />} />
+        <Route path="/category/special" element={<Special />} />
       </Routes>
     </Router>
   );
