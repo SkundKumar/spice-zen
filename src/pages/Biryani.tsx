@@ -27,7 +27,7 @@ const menuItems: MenuItem[] =
         category: { en: "Rice Dishes", jp: "ライス料理" },
         image: "https://i.pinimg.com/736x/a4/66/9a/a4669a419a1d51fc927182f6660bfb3e.jpg",
         featured: true,
-        size: "medium",
+        size: "large",
         mobsize: "large",
         price: "",
         variations: [
@@ -43,7 +43,7 @@ const menuItems: MenuItem[] =
         description: { en: "Stir-fried rice mixed with eggs, vegetables, seafood, or meat", jp: "チャーハンは、中華鍋やフライパンで炒めたご飯に、卵、野菜、魚介類、肉などの他の材料を混ぜた料理です。" },
         category: { en: "Rice Dishes", jp: "ライス料理" },
         image: "https://upload.wikimedia.org/wikipedia/commons/6/60/Fried_Rice.jpg",
-        size: "medium",
+        size: "small",
         mobsize: "medium",
         price: "",
         variations: [
@@ -173,7 +173,7 @@ function Biryani() {
             ${item.size === 'medium' ? 'md:col-span-2 lg:col-span-2' : ''}
 ${item.size === 'large' ? 'md:col-span-2 lg:col-span-2 md:row-span-2' : ''}
 ${item.mobsize === 'medium' ? 'sm:col-span-2 sm:row-span-1 md:col-span-1 md:row-span-1' : ''}
-${item.mobsize === 'large' ? 'sm:col-span-2 sm:row-span-2 md:col-span-1 md:row-span-1' : ''}
+${item.mobsize === 'large' ? 'sm:col-span-2 sm:row-span-2 md:col-span-1 md:row-span-2' : ''}
 
           `}
       >
