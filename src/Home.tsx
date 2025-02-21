@@ -16,7 +16,7 @@ const Home = () => {
   const translations = {
     en: {
       title: "North Park",
-      subtitle: " where authentic Indian flavors and culinary excellence await you! I",
+      subtitle: " where authentic Indian flavors and culinary excellence awaits you!",
       exploreMenu: "Explore Menu",
       visitUs: "Visit Us",
       address:"1-7 Higashimanabemachi, Tsuchiura, Ibaraki 300-0052",
