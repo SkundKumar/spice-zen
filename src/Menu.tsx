@@ -181,7 +181,7 @@ function Menu() {
     className="
       grid grid-cols-2 gap-3 auto-rows-[200px] 
       sm:grid-cols-2 sm:auto-rows-[300px] 
-      md:grid-cols-2 lg:grid-cols-2
+      md:grid-cols-2 lg:grid-cols-3
     "
   >
     {menuItems.map((item, index) => (
