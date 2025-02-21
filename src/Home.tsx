@@ -120,7 +120,7 @@ const Home = () => {
                 key={section}
                 onClick={() => scrollToSection(section)}
                 className={`relative text-white hover:text-orange-600 transition-colors duration-300 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
+                  isScrolled ? 'text-gray-800' : 'text-white'
                 } ${activeSection === section ? 'text-orange-600' : ''}`}
               >
                 <span className="capitalize">{section}</span>
@@ -163,7 +163,7 @@ const Home = () => {
               {translations[language].subtitle}
             </p>
             <button 
-              onClick={() => scrollToSection('menu')}
+              onClick={() => navigate('/menu')}
               className="bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group"
             >
               Explore Menu 
