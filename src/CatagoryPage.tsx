@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { UtensilsCrossed, Star, Languages, ChefHat } from 'lucide-react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { useNavigate } from 'react-router-dom';
+
 gsap.registerPlugin(ScrollTrigger);
 
 interface MenuItem {
@@ -40,7 +40,7 @@ const menuItems: MenuItem[] =
     
     },
     {
-      name: { en: "Dessert", jp: "グラブジャムン" },
+      name: { en: "Gulab Jamun", jp: "グラブジャムン" },
       description: { en: "Soft fried milk dumplings soaked in rose-flavored sugar syrup", jp: "ローズ風味のシロップに浸した柔らかい揚げミルク団子" },
       price: "$15",
       category: { en: "Dessert", jp: "デザート" },
@@ -50,7 +50,7 @@ const menuItems: MenuItem[] =
      
     },
     {
-      name: { en: "Appetizer", jp: "タンドリープラッター" },
+      name: { en: "Tandoori Platter", jp: "タンドリープラッター" },
       description: { en: "Assortment of tandoori meats and vegetables, served with mint chutney", jp: "タンドリーミートと野菜の盛り合わせ、ミントチャツネ添え" },
       price: "$50",
       category: { en: "Appetizer", jp: "前菜" },
@@ -60,51 +60,96 @@ const menuItems: MenuItem[] =
       
     },
     {
-      name: { en: "South India", jp: "マサラドーサ" },
+      name: { en: "Butter Chicken", jp: "バターチキン" },
+      description: { en: "Classic Indian butter chicken with rich tomato and cashew gravy", jp: "濃厚なトマトとカシューナッツのグレービーで仕上げたインドの定番バターチキン" },
+      price: "$35",
+      category: { en: "Main Course", jp: "メイン" },
+      image: "https://imgs.search.brave.com/mMs3b2YFe4us1A1GSP2hAcxXcDZ2_dm3vLzKTUdr_oQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA5LzE0LzY0LzQz/LzM2MF9GXzkxNDY0/NDM1Ml8zTHVjWE5i/cEtQMGEwcG5ZY1Jn/QnY0U2JRd29PbGpX/di5qcGc",
+      size: "small",
+      
+    },
+    {
+      name: { en: "Paneer Tikka", jp: "パニールティッカ" },
+      description: { en: "Chargrilled cottage cheese marinated in yogurt and spices", jp: "ヨーグルトとスパイスに漬け込んだカッテージチーズの炭火焼き" },
+      price: "$30",
+      category: { en: "Appetizer", jp: "前菜" },
+      image: "https://imgs.search.brave.com/bvlZpQAIsOIZBvaGS7sQDjU5btatsDDmaN7mKgNbw1A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA4LzI0LzM1LzYx/LzM2MF9GXzgyNDM1/NjE1Ml95bkRCMTRK/MHFZejhERU5DWG9S/cTZ3SVJCYWxHSm9s/RC5qcGc",
+      size: "small",
+      mobsize: "large"
+      
+
+    },
+    {
+      name: { en: "Mango Lassi", jp: "マンゴーラッシー" },
+      description: { en: "Refreshing yogurt-based mango drink with cardamom", jp: "カルダモンが香る爽やかなヨーグルトベースのマンゴードリンク" },
+      price: "$10",
+      category: { en: "Beverage", jp: "飲み物" },
+      image: "https://imgs.search.brave.com/oP2sBqIybLcrdrwCJ3jqOUKqVS_G_oXAcURth_FIzBc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzEwLzk0LzczLzM3/LzM2MF9GXzEwOTQ3/MzM3NDFfcjBYbWhj/b2EwdWUwN0o5YnJ1/bVRlZHZsQ1l6VHZ2/c0YuanBn",
+      size: "medium",
+      
+    },
+    {
+      name: { en: "Gulab Jamun", jp: "グラブジャムン" },
+      description: { en: "Soft fried milk dumplings soaked in rose-flavored sugar syrup", jp: "ローズ風味のシロップに浸した柔らかい揚げミルク団子" },
+      price: "$15",
+      category: { en: "Dessert", jp: "デザート" },
+      image: "https://imgs.search.brave.com/3yqpGIBECHuOr_7gq0kTKMBHtuX1i5qR4TxlpP7XnN4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzk5LzEw/LzEyLzk5MTAxMjBi/YWY5ZmVhOWU4YmVj/MDUzYTk2NGRkYTZi/LmpwZw",
+      size: "small",
+      mobsize: "medium"
+    },
+    {
+      name: { en: "Masala Dosa", jp: "マサラドーサ" },
       description: { en: "Crispy rice crepe filled with spiced potatoes, served with chutneys", jp: "スパイス風味のポテトを詰めたカリカリの米クレープ、チャツネ添え" },
       price: "$25",
       category: { en: "South Indian", jp: "南インド" },
       image: "https://imgs.search.brave.com/hNJogRvrk0ia949nDS1k0K5XlH8Le9DeMfW3Q4qsWFk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzFkLzli/LzFjLzFkOWIxY2Fm/MjkwZGQ1MjVmMDNm/MzkyMWZhZTVjOWM0/LmpwZw",
-      size: "small"
+      size: "large"
     },
     {
-      name: { en: "Vegetarian", jp: "ラジマチャワル" },
+      name: { en: "Rajma Chawal", jp: "ラジマチャワル" },
       description: { en: "Slow-cooked red kidney beans with aromatic basmati rice", jp: "じっくり煮込んだレッドキドニービーンズと香り高いバスマティ米" },
       price: "$20",
       category: { en: "Vegetarian", jp: "ベジタリアン" },
       image: "https://imgs.search.brave.com/x5ZcmKmzUUfE5kVCVR9evfAp_1aA6xLOJ4YHigzq3BI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGVhZm9ydHVybWVy/aWMuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDI0LzA0L1Jh/am1hLTEyLTcyOHgx/MDkyLmpwZw",
-      size: "medium"
+      size: "small"
     }
   ];
 
 function Menu() {
-  const navigate = useNavigate();
     const [language, setLanguage] = useState<'en' | 'jp'>('en');
     const gridRef = useRef<HTMLDivElement>(null);
     const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   
     useEffect(() => {
       if (!gridRef.current) return;
-    
-      gsap.fromTo(
-        cardsRef.current.filter(Boolean),
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          ease: "power4.out",
-          stagger: 0.2, // Batching effect
-          scrollTrigger: {
-            trigger: gridRef.current,
-            start: "top bottom-=100",
-            end: "top center",
-            toggleActions: "play none none reverse",
+  
+      const cards = cardsRef.current.filter(Boolean);
+      
+      cards.forEach((card, index) => {
+        gsap.fromTo(card,
+          {
+            opacity: 0,
+            y: 50,
           },
-        }
-      );
-    
-      return () => ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top bottom-=100",
+              end: "top center",
+              toggleActions: "play none none reverse",
+            },
+            delay: (index % 3) * 0.1
+          }
+        );
+      });
+  
+      return () => {
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      };
     }, []);
   
     return (
@@ -143,7 +188,6 @@ function Menu() {
       <div
         key={item.name.en}
         ref={el => cardsRef.current[index] = el}
-        onClick={() => navigate(`/category/${item.category.en.toLowerCase().replace(/\s+/g, '-')}`)}
         className={`
             group relative rounded-2xl overflow-hidden bg-orange-100/50 backdrop-blur-lg shadow-lg hover:shadow-2xl transition-all duration-500 ease-out 
             ${item.size === 'medium' ? 'md:col-span-2 lg:col-span-2' : ''}
