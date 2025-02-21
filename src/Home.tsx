@@ -15,13 +15,14 @@ const Home = () => {
 
   const translations = {
     en: {
-      title: "Spice & Zen",
-      subtitle: "Where Indian Flavors Meet Japanese Elegance",
+      title: "North Park",
+      subtitle: " where authentic Indian flavors and culinary excellence await you! I",
       exploreMenu: "Explore Menu",
       visitUs: "Visit Us",
-      address: "1-2-3 Shibuya, Tokyo, Japan 150-0002",
+      address:"1-7 Higashimanabemachi, Tsuchiura, Ibaraki 300-0052",
       connect: "Connect With Us",
       toggleLanguage: "日本語",
+      explore: "Explore Full Menu",
     },
     jp: {
       title: "スパイス＆禅",
@@ -31,6 +32,7 @@ const Home = () => {
       address: "東京都渋谷区1-2-3 150-0002",
       connect: "お問い合わせ",
       toggleLanguage: "English",
+      explore:"メニュー"
     },
   };
 
@@ -144,7 +146,7 @@ const Home = () => {
       <section id="home" ref={heroRef} className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=2832&q=80" 
+            src="https://lh5.googleusercontent.com/VXjZuFczQeWo_iMNUQ95jV5mptzbswTka5DlE0-ItCZAXP7fNKoTuoQT5u3ZMaKh8RReiTTzmkHbBv_EE8eSvnQ" 
             alt="Restaurant interior" 
             className="w-full h-full object-cover"
           />
@@ -166,7 +168,7 @@ const Home = () => {
               onClick={() => navigate('/menu')}
               className="bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group"
             >
-              Explore Menu 
+              {translations[language].explore} 
               <ChevronDown className="ml-2 group-hover:translate-y-1 transition-transform duration-300" />
             </button>
           </div>
@@ -319,11 +321,11 @@ const Home = () => {
                 </div>
                 <h3 className="text-xl font-semibold">Visit Us</h3>
               </div>
-              <p className="text-gray-600">1-2-3 Shibuya, Tokyo, Japan 150-0002</p>
+              <p className="text-gray-600">1-7 Higashimanabemachi, Tsuchiura, Ibaraki 300-0052</p>
               <div className="mt-6">
                 <iframe
                   className="w-full h-48 rounded-lg"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754722365!2d139.7005713!3d35.6614616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca428c01717%3A0x6b8bd4f5b3cc8ba9!2sShibuya%2C%20Tokyo!5e0!3m2!1sen!2sjp!4v1635000000000!5m2!1sen!2sjp"
+                  src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d201.50819145660188!2d140.206474!3d36.090293!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDA1JzI1LjAiTiAxNDDCsDEyJzIzLjMiRQ!5e0!3m2!1sen!2sus!4v1740129253055!5m2!1sen!2sus"
                   loading="lazy"
                 ></iframe>
               </div>
@@ -339,8 +341,8 @@ const Home = () => {
                   <h3 className="text-xl font-semibold">Hours</h3>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-gray-600">Monday - Friday: 11:30 AM - 10:00 PM</p>
-                  <p className="text-gray-600">Saturday - Sunday: 12:00 PM - 11:00 PM</p>
+                  <p className="text-gray-600">Monday - Sunday: 11:00 AM - 10:00 PM</p>
+                  
                 </div>
               </div>
               <div>
@@ -350,8 +352,8 @@ const Home = () => {
                   </div>
                   <h3 className="text-xl font-semibold">Contact</h3>
                 </div>
-                <p className="text-gray-600">+81 3-1234-5678</p>
-                <p className="text-gray-600">info@spiceandzen.jp</p>
+                <p className="text-gray-600"> 029-811-9527</p>
+                <p className="text-gray-600">northparknp@gmail.com</p>
               </div>
             </div>
 
@@ -389,10 +391,10 @@ const Home = () => {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-6 text-center scale-up">
-          <p className="text-2xl font-bold mb-4 gradient-text">Spice & Zen</p>
+          <p className="text-2xl font-bold mb-4 gradient-text">North Park</p>
           <p className="text-gray-400">Where tradition meets innovation</p>
           <div className="mt-8 text-sm text-gray-400">
-            © 2024 Spice & Zen. All rights reserved.
+            © 2024 North Park. All rights reserved.
           </div>
         </div>
       </footer>
