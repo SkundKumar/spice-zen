@@ -24,7 +24,7 @@ const menuItems: MenuItem[] =
       description: { en: "a light snack", jp: "" },
       
       category: { en: "Starters", jp: "" },
-      image: "/public/Website_Food Pictures/Starters & Grills/Tandoori Prawn.jpg",
+      image: "/Website_Food Pictures/Starters & Grills/Tandoori Prawn.jpg",
       featured: true,
       size: "small",
       mobsize: "medium"
