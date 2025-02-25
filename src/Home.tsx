@@ -117,7 +117,7 @@ const Home = () => {
                   key={section}
                   onClick={() => scrollToSection(section)}
                   className={`relative text-white hover:text-orange-600 transition-colors duration-300 ${
-                    isScrolled ? 'text-gray-800' : 'text-white'
+                    isScrolled ? 'text-black' : 'text-white'
                   } ${activeSection === section ? 'text-orange-600' : ''}`}
                 >
                   <span className="capitalize">{section}</span>
