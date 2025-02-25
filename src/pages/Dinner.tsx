@@ -71,10 +71,10 @@ function Accordion({ title, items, language }: AccordionProps) {
                 <span className="text-orange-300 text-sm font-medium">
                   {item.category[language]}
                 </span>
-                <h3 className="text-white text-lg font-semibold mt-1">
+                <h3 className="text-white text-3xl font-semibold mt-1">
                   {item.name[language]}
                 </h3>
-                <p className="text-white text-sm mt-1 ">
+                <p className="text-white text-md mt-1 ">
                   {item.description[language]}
                 </p>
                 <p className="text-orange-300 font-semibold mt-2">{item.price}</p>
@@ -189,7 +189,7 @@ const menuItems = {
       "description": { "en": "Chicken in Spinach Curry", "jp": "ほうれん草のチキンカレー" },
       "category": { "en": "Chicken", "jp": "チキン" },
       "price": "¥1180",
-      "image": "/public/Website_Food Pictures/Chicken Curry/Sag Chicken.jpg"
+      "image": "/Website_Food Pictures/Chicken Curry/Sag Chicken.jpg"
     },
     {
       "name": { "en": "Keema Curry", "jp": "キーマカレー" },
