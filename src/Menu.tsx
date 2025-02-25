@@ -54,7 +54,7 @@ const menuItems: MenuItem[] =
       description: { en: "Assortment of tandoori meats and vegetables, served with mint chutney", jp: "タンドリーミートと野菜の盛り合わせ、ミントチャツネ添え" },
       
       category: { en: "Dinner", jp: "夕食" },
-      image: "/public/Website_Food Pictures/Chicken Curry/Kadhai Chicken.jpeg",
+      image: "/Website_Food Pictures/Chicken Curry/Kadhai Chicken.jpeg",
       featured: true,
       size: "medium",
       
@@ -72,7 +72,7 @@ const menuItems: MenuItem[] =
       description: { en: "Rice that has been stir-fried in a wok or a frying pan and is usually mixed with other ingredients such as eggs, vegetables, seafood, or meat", jp: "チャーハンは、中華鍋やフライパンで炒めたご飯に、卵、野菜、魚介類、肉などの他の材料を混ぜた料理です。" },
       
       category: { en: "Biryani", jp: "ベジタリアン" },
-      image: "/public/Website_Food Pictures/Rice_Biryani/Chicken Biryani.jpg",
+      image: "/Website_Food Pictures/Rice_Biryani/Chicken Biryani.jpg",
       size: "medium"
     },
     {
