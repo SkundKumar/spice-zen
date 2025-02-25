@@ -48,7 +48,7 @@ function Accordion({ title, items, language }: AccordionProps) {
       <div
         ref={contentRef}
         className={`transition-all duration-500 ease-out ${
-          isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+          isOpen ? 'max-h-[4000px] opacity-100' : 'max-h-0 opacity-0'
         } overflow-hidden`}
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
