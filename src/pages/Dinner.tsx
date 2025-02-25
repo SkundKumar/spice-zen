@@ -67,14 +67,14 @@ function Accordion({ title, items, language }: AccordionProps) {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-4">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4">
                 <span className="text-orange-300 text-sm font-medium">
                   {item.category[language]}
                 </span>
                 <h3 className="text-white text-lg font-semibold mt-1">
                   {item.name[language]}
                 </h3>
-                <p className="text-gray-200 text-sm mt-1">
+                <p className="text-white text-sm mt-1 ">
                   {item.description[language]}
                 </p>
                 <p className="text-orange-300 font-semibold mt-2">{item.price}</p>
@@ -171,33 +171,61 @@ const menuItems = {
   ],
   chicken: [
     {
-        name: { en: "Butter Chicken", jp: "バターチキン" },
-        description: { en: "Creamy Butter Tomato Sauce Chicken Curry", jp: "クリーミーパタートマトソースチキンカレー" },
-        category: { en: "Chicken", jp: "チキン" },
-        price: "¥1280",
-        image: "/Website_Food Pictures/Chicken Curry/Butter Chicken.jpg"
-      },
-      {
-        name: { en: "Kadhai Chicken", jp: "カダイチキン" },
-        description: { en: "Chicken in Spicy Curry", jp: "チキンのスパイシーカレー" },
-        category: { en: "Chicken", jp: "チキン" },
-        price: "¥1180",
-        image: "/Website_Food Pictures/Chicken Curry/Kadhai Chicken.jpeg"
-      },
-      {
-        name: { en: "Chicken Tikka Masala", jp: "チキンティッカマサラ" },
-        description: { en: "Roasted Marinated Chicken in Spiced Curry Sauce", jp: "マリネチキンのローストスパイスカレーソース" },
-        category: { en: "Chicken", jp: "チキン" },
-        price: "¥1180",
-        image: "/Website_Food Pictures/Chicken Curry/Chicken Tikka Masala.jpg"
-      },
-      {
-        name: { en: "Chicken Mughlai", jp: "チキンムグライ" },
-        description: { en: "Mild chicken curry with boiled egg", jp: "マイルドチキンカレーゆで卵添え" },
-        category: { en: "Chicken", jp: "チキン" },
-        price: "¥1280",
-        image: "/Website_Food Pictures/Chicken Curry/Chicken Mughlai.jpg"
-      }
+      "name": { "en": "Butter Chicken", "jp": "バターチキン" },
+      "description": { "en": "Creamy Butter Tomato Sauce Chicken Curry", "jp": "クリーミーパタートマトソースチキンカレー" },
+      "category": { "en": "Chicken", "jp": "チキン" },
+      "price": "¥1280",
+      "image": "/Website_Food Pictures/Chicken Curry/Butter Chicken.jpg"
+    },
+    {
+      "name": { "en": "Kadhai Chicken", "jp": "カダイチキン" },
+      "description": { "en": "Chicken in Spicy Curry", "jp": "チキンのスパイシーカレー" },
+      "category": { "en": "Chicken", "jp": "チキン" },
+      "price": "¥1180",
+      "image": "/Website_Food Pictures/Chicken Curry/Kadhai Chicken.jpeg"
+    },
+    {
+      "name": { "en": "Palak Chicken", "jp": "パラクチキン" },
+      "description": { "en": "Chicken in Spinach Curry", "jp": "ほうれん草のチキンカレー" },
+      "category": { "en": "Chicken", "jp": "チキン" },
+      "price": "¥1180",
+      "image": "/public/Website_Food Pictures/Chicken Curry/Sag Chicken.jpg"
+    },
+    {
+      "name": { "en": "Keema Curry", "jp": "キーマカレー" },
+      "description": { "en": "Minced Chicken Curry", "jp": "チキンミンチカレー" },
+      "category": { "en": "Chicken", "jp": "チキン" },
+      "price": "¥1280",
+      "image": "/Website_Food Pictures/Chicken Curry/Keema Curry.jpg"
+    },
+    {
+      "name": { "en": "Shahi Chicken", "jp": "シャヒチキン" },
+      "description": { "en": "Boneless Chicken with Cashew Nut Paste Masala", "jp": "骨なしチキンのカシューナッツペーストマサラ添え" },
+      "category": { "en": "Chicken", "jp": "チキン" },
+      "price": "¥1280",
+      "image": "/Website_Food Pictures/Chicken Curry/Shahi Chicken.jpg"
+    },
+    {
+      "name": { "en": "Chicken Tikka Masala", "jp": "チキンティッカマサラ" },
+      "description": { "en": "Roasted Marinated Chicken in Spiced Curry Sauce", "jp": "マリネチキンのローストスパイスカレーソース" },
+      "category": { "en": "Chicken", "jp": "チキン" },
+      "price": "¥1180",
+      "image": "/Website_Food Pictures/Chicken Curry/Chicken Tikka Masala.jpg"
+    },
+    {
+      "name": { "en": "Chicken Mughlai", "jp": "チキンムグライ" },
+      "description": { "en": "Mild Chicken Curry with Boiled Egg", "jp": "マイルドチキンカレーゆで卵添え" },
+      "category": { "en": "Chicken", "jp": "チキン" },
+      "price": "¥1280",
+      "image": "/Website_Food Pictures/Chicken Curry/Chicken Mughlai.jpg"
+    },
+    {
+      "name": { "en": "Chicken Chilli", "jp": "チキンチリ" },
+      "description": { "en": "Tender Fried Chicken in Aromatic Sweet, Spicy Chilli Sauce.", "jp": "柔らかいフライドチキンを甘辛チリソースで味付けしました。" },
+      "category": { "en": "Chicken", "jp": "チキン" },
+      "price": "¥1180",
+      "image": "/Website_Food Pictures/Chicken Curry/Chicken-Chilli 2.JPG"
+    }
   ],
   vegetable: [
     {
