@@ -25,7 +25,7 @@ const menuItems: MenuItem[] =
         name: { en: "Biryani/Rice", jp: "ビリヤニ . ライス" },
         description: { en: "Spicy pilaf with basmati rice (Indian rice)", jp: "バスマティ米（インド米）を使ったスパイシーピラフ" },
         category: { en: "Rice Dishes", jp: "ライス料理" },
-        image: "https://i.pinimg.com/736x/a4/66/9a/a4669a419a1d51fc927182f6660bfb3e.jpg",
+        image: "/public/Website_Food Pictures/Rice_Biryani/Chicken Biryani.jpg",
         featured: true,
         size: "large",
         mobsize: "large",
@@ -42,7 +42,7 @@ const menuItems: MenuItem[] =
         name: { en: "Fried Rice", jp: "炒飯" },
         description: { en: "Stir-fried rice mixed with eggs, vegetables, seafood, or meat", jp: "チャーハンは、中華鍋やフライパンで炒めたご飯に、卵、野菜、魚介類、肉などの他の材料を混ぜた料理です。" },
         category: { en: "Rice Dishes", jp: "ライス料理" },
-        image: "https://upload.wikimedia.org/wikipedia/commons/6/60/Fried_Rice.jpg",
+        image: "/public/Website_Food Pictures/Rice_Biryani/Fried Rice .jpg",
         size: "small",
         mobsize: "medium",
         price: "",
@@ -56,7 +56,7 @@ const menuItems: MenuItem[] =
         name: { en: "Saffron Rice", jp: "サフランライス" },
         description: { en: "Saffron Colored (Yellow) Rice", jp: "サフラン色（黄色）の米" },
         category: { en: "Rice Dishes", jp: "ライス料理" },
-        image: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Saffron_rice.jpg",
+        image: "/public/Website_Food Pictures/Rice_Biryani/Saffron Rice.jpg",
         size: "small",
         mobsize: "small",
         price: ""
@@ -111,7 +111,7 @@ function Biryani() {
         >
           <div className="container mx-auto px-6 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <h1 className="text-3xl font-serif text-gray-900 drop-shadow-lg">North Park</h1>
+            <h1 className="text-3xl font-serif text-gray-900"><a href='/menu'>North Park</a></h1>
             </div>
             <button
               onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}

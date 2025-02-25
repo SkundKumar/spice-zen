@@ -24,7 +24,7 @@ const menuItems: MenuItem[] =
       description: { en: "a light snack", jp: "" },
       
       category: { en: "Starters", jp: "" },
-      image: "https://imgs.search.brave.com/D5ZDJoopf8ItiLVL3P1GQgLMaUKl7puqi4IoiIgMV_8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzdiLzA3/LzRiLzdiMDc0YmMz/OTdiNTE2Y2ZkMzdm/NDAyYWY0MDVkZDUx/LmpwZw",
+      image: "/public/Website_Food Pictures/Starters & Grills/Tandoori Prawn.jpg",
       featured: true,
       size: "small",
       mobsize: "medium"
@@ -54,7 +54,7 @@ const menuItems: MenuItem[] =
       description: { en: "Assortment of tandoori meats and vegetables, served with mint chutney", jp: "タンドリーミートと野菜の盛り合わせ、ミントチャツネ添え" },
       
       category: { en: "Dinner", jp: "夕食" },
-      image: "https://imgs.search.brave.com/px1fhRpd4iIWG4dh1UhpxXO0ba-yEMpEFXpSWAqaef8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9tYW55LWRpZmZl/cmVudC1kZWxpY2lv/dXMtZGlzaGVzLXRh/YmxlLXJlc3RhdXJh/bnRfMTI4NDQyLTI3/MC5qcGc_c2VtdD1h/aXNfaHlicmlk",
+      image: "/public/Website_Food Pictures/Chicken Curry/Kadhai Chicken.jpeg",
       featured: true,
       size: "medium",
       
@@ -64,7 +64,7 @@ const menuItems: MenuItem[] =
       description: { en: "Crispy indian style breads", jp: "クリスピーなインド風パン" },
       
       category: { en: "Naan/Breads", jp: "ナン/パン" },
-      image: "https://lh6.googleusercontent.com/VEHbHCAZb7IvGMkzin6yH2YvXXqhT1mFqKA169fUFQMc1qyEvZ29r4HX2HDJTbJI2r9XtjM4HfKWscD9giEbURw",
+      image: "/public/Website_Food Pictures/Breads_Nan/Tandoori Roti.jpg",
       size: "small"
     },
     {
@@ -72,7 +72,7 @@ const menuItems: MenuItem[] =
       description: { en: "Rice that has been stir-fried in a wok or a frying pan and is usually mixed with other ingredients such as eggs, vegetables, seafood, or meat", jp: "チャーハンは、中華鍋やフライパンで炒めたご飯に、卵、野菜、魚介類、肉などの他の材料を混ぜた料理です。" },
       
       category: { en: "Biryani", jp: "ベジタリアン" },
-      image: "https://i.pinimg.com/736x/a4/66/9a/a4669a419a1d51fc927182f6660bfb3e.jpg",
+      image: "/public/Website_Food Pictures/Rice_Biryani/Chicken Biryani.jpg",
       size: "medium"
     },
     {
@@ -80,7 +80,7 @@ const menuItems: MenuItem[] =
       description: { en: "Slow-cooked red kidney beans with aromatic basmati rice", jp: "じっくり煮込んだレッドキドニービーンズと香り高いバスマティ米" },
       
       category: { en: "Special", jp:"スペシャルミールセット" },
-      image: "https://lh3.googleusercontent.com/KUa68hNhPNCE91uR3hVT44NzWSiiVry-V7YTxcagD0QLCbM7fdnMm1UG74tmOoUsoLQNLFG-Mz0RVw2p8_uS0-k",
+      image: "",
       size: "small"
     }
   ];
@@ -125,7 +125,7 @@ function Menu() {
         >
           <div className="container mx-auto px-6 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <h1 className="text-3xl font-serif text-gray-900 drop-shadow-lg">Spics & Zen</h1>
+            <h1 className="text-3xl font-serif text-gray-900"><a href='/'>North Park</a></h1>
             </div>
             <button
               onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}
