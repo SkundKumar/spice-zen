@@ -25,7 +25,7 @@ const menuItems: MenuItem[] =
         name: { en: "Biryani/Rice", jp: "ビリヤニ . ライス" },
         description: { en: "Spicy pilaf with basmati rice (Indian rice)", jp: "バスマティ米（インド米）を使ったスパイシーピラフ" },
         category: { en: "Rice Dishes", jp: "ライス料理" },
-        image: "Website_Food Pictures/Rice_Biryani/Chicken Biryani.jpg",
+        image: "/Website_Food Pictures/Rice_Biryani/Chicken Biryani.jpg",
         featured: true,
         size: "large",
         mobsize: "large",
