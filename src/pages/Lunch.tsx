@@ -8,11 +8,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const menuImages = [
   {
-    url: "/public/Website_Food Pictures/Lunch Menu photo/Lunch Menu_Single Page_1.jpg",
+    url: "/Website_Food Pictures/Lunch Menu photo/Lunch Menu_Single Page_1.jpg",
     title: { en: "Lunch Menu Page 1", jp: "ランチメニュー ページ1" }
   },
   {
-    url: "/public/Website_Food Pictures/Lunch Menu photo/Lunch Menu_Single Page_2.jpg",
+    url: "/Website_Food Pictures/Lunch Menu photo/Lunch Menu_Single Page_2.jpg",
     title: { en: "Lunch Menu Page 2", jp: "ランチメニュー ページ2" }
   }
 ];

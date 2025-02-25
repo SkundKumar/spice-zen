@@ -24,7 +24,7 @@ interface MenuItem {
       name: { en: "Cheese Nan", jp: "チーズナン" },
       description: { en: "Nan with delicious cheese filling", jp: "チーズたっぷりのナンがおいしい" },
       category: { en: "Naan", jp: "ナン" },
-      image: "/public/Website_Food Pictures/Breads_Nan/Cheese Nan.JPG", 
+      image: "/Website_Food Pictures/Breads_Nan/Cheese Nan.JPG", 
       price: "",
       size: "large",
       mobsize: "medium"
@@ -42,7 +42,7 @@ interface MenuItem {
       name: { en: "Cheese Honey Nan", jp: "チーズハニーナン" },
       description: { en: "Nan with delicious cheese filling & honey topping", jp: "チーズ入りナンとハチミツトッピング" },
       category: { en: "Naan", jp: "ナン" },
-      image: "/public/Website_Food Pictures/Breads_Nan/Choco Honey Nan.jpg", 
+      image: "/Website_Food Pictures/Breads_Nan/Choco Honey Nan.jpg", 
       price: "",
       size: "small",
       mobsize: "small"
@@ -51,7 +51,7 @@ interface MenuItem {
       name: { en: "Garlic Cheese Honey Nan", jp: "ガーリックチーズハニーナン" },
       description: { en: "Nan with delicious cheese filling, garlic & honey topping", jp: "おいしいチーズフィリングとガーリック＆ハチミツをトッピングしたナン" },
       category: { en: "Naan", jp: "ナン" },
-      image: "/public/Website_Food Pictures/Breads_Nan/Garlic Cheese honey nan-2.jpg", 
+      image: "/Website_Food Pictures/Breads_Nan/Garlic Cheese honey nan-2.jpg", 
       price: "",
       size: "medium",
       mobsize: "medium"
@@ -60,7 +60,7 @@ interface MenuItem {
       name: { en: "Garlic Nan", jp: "ガーリックナン" },
       description: { en: "Nan with chopped garlic topping", jp: "刻んだニンニクをトッピングしたナン" },
       category: { en: "Naan", jp: "ナン" },
-      image: "/public/Website_Food Pictures/Breads_Nan/Garlic_Nan.JPG", 
+      image: "/Website_Food Pictures/Breads_Nan/Garlic_Nan.JPG", 
       price: "",
       size: "small",
       mobsize: "small"
@@ -69,7 +69,7 @@ interface MenuItem {
       name: { en: "Kabuli Nan", jp: "カブリ・ナン" },
       description: { en: "A slightly sweet nan with nuts, coconut, raisins, etc.", jp: "ナッツ、ココナッツ、レーズンなどが入ったほんのり甘いナン。" },
       category: { en: "Naan", jp: "ナン" },
-      image: "/public/Website_Food Pictures/Breads_Nan/Kabuli Nan.JPG", 
+      image: "/Website_Food Pictures/Breads_Nan/Kabuli Nan.JPG", 
       price: "",
       size: "small",
       mobsize: "large"
@@ -78,7 +78,7 @@ interface MenuItem {
       name: { en: "Plain Nan", jp: "プレーンナン" },
       description: { en: "Simple nan. It goes well with any curry", jp: "シンプルなナン。 どんなカレーにも合いますよ" },
       category: { en: "Naan", jp: "ナン" },
-      image: "/public/Website_Food Pictures/Breads_Nan/Plain Nan.jpg", 
+      image: "/Website_Food Pictures/Breads_Nan/Plain Nan.jpg", 
       price: "",
       size: "large",
       mobsize: "medium"
@@ -87,7 +87,7 @@ interface MenuItem {
       name: { en: "Tandoori Roti", jp: "タンドリーロティ" },
       description: { en: "", jp: "" },
       category: { en: "Naan", jp: "ナン" },
-      image: "/public/Website_Food Pictures/Breads_Nan/Tandoori Roti.jpg", 
+      image: "/Website_Food Pictures/Breads_Nan/Tandoori Roti.jpg", 
       price: "",
       size: "medium",
       mobsize: "small"
@@ -96,7 +96,7 @@ interface MenuItem {
       name: { en: "Three Layer Butter Nan", jp: "三層バターナン" },
       description: { en: "Soft nan made with three layers & butter topping", jp: "三層のふんわりナン＆バタートッピング" },
       category: { en: "Naan", jp: "ナン" },
-      image: "/public/Website_Food Pictures/Breads_Nan/Three Layer Butter Nan.JPG", 
+      image: "/Website_Food Pictures/Breads_Nan/Three Layer Butter Nan.JPG", 
       price: "",
       size: "small",
       mobsize: "small"

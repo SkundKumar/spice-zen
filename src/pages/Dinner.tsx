@@ -101,35 +101,35 @@ const menuItems = {
         description: { en: "Boneless Fish Cooked in Masala Sauce", jp: "骨なし魚のマサラソース煮" },
         category: { en: "Seafood", jp: "海鮮" },
         price: "¥1280",
-        image: "/public/Website_Food Pictures/Seafood Delicacies/Fish Curry.1.JPG"
+        image: "/Website_Food Pictures/Seafood Delicacies/Fish Curry.1.JPG"
       },
       {
         name: { en: "Chilli Fish", jp: "チリ魚" },
         description: { en: "Spicy Fish Curry", jp: "スパイシーフィッシュカレー" },
         category: { en: "Seafood", jp: "海鮮" },
         price: "¥1280",
-        image: "/public/Website_Food Pictures/Seafood Delicacies/Chilli Fish .jpeg"
+        image: "/Website_Food Pictures/Seafood Delicacies/Chilli Fish .jpeg"
       },
       {
         name: { en: "Prawn Masala", jp: "エビマサラ" },
         description: { en: "Prawns Cooked in Tomato Masala Paste", jp: "エビのトマトマサラペースト煮" },
         category: { en: "Seafood", jp: "海鮮" },
         price: "¥1380",
-        image: "/public/Website_Food Pictures/Seafood Delicacies/"
+        image: "/Website_Food Pictures/Seafood Delicacies/"
       },
       {
         name: { en: "Chilli Garlic Prawn", jp: "チリガーリックプロウン" },
         description: { en: "Prawn Curry Cooked with Chilli and Garlic Sauce", jp: "エビのチリソースとガーリックソースのカレー" },
         category: { en: "Seafood", jp: "海鮮" },
         price: "¥1380",
-        image: "/public/Website_Food Pictures/Seafood Delicacies/"
+        image: "/Website_Food Pictures/Seafood Delicacies/"
       },
       {
         name: { en: "Mix Seafood", jp: "ミックスシーフード" },
         description: { en: "Prawns, Squid & Clam Curry", jp: "エビ、イカ、アサリのカレー" },
         category: { en: "Seafood", jp: "海鮮" },
         price: "¥1280",
-        image: "/public/Website_Food Pictures/Seafood Delicacies/Mix Seafood .jpg"
+        image: "/Website_Food Pictures/Seafood Delicacies/Mix Seafood .jpg"
       }
     ],
   mutton: [
@@ -138,7 +138,7 @@ const menuItems = {
         description: { en: "Mutton in Spinach Curry", jp: "マトンのほうれん草カレー" },
         category: { en: "Mutton", jp: "マトン" },
         price: "¥1280",
-        image: "/public/Website_Food Pictures/Mutton Curry/"
+        image: "/Website_Food Pictures/Mutton Curry/"
       },
       {
         name: { en: "Mughlai Mutton", jp: "シャヒマトン" },
@@ -152,7 +152,7 @@ const menuItems = {
         description: { en: "Mutton, Pepper, & Onion Curry", jp: "マトン、ペッパー、オニオンのカレー" },
         category: { en: "Mutton", jp: "マトン" },
         price: "¥1280",
-        image: "/public/Website_Food Pictures/Mutton Curry/Mutton Do Pyaza.jpg"
+        image: "/Website_Food Pictures/Mutton Curry/Mutton Do Pyaza.jpg"
       },
       {
         name: { en: "Dal Gosht", jp: "ダル・ゴシュト" },
@@ -175,28 +175,28 @@ const menuItems = {
         description: { en: "Creamy Butter Tomato Sauce Chicken Curry", jp: "クリーミーパタートマトソースチキンカレー" },
         category: { en: "Chicken", jp: "チキン" },
         price: "¥1280",
-        image: "/public/Website_Food Pictures/Chicken Curry/Butter Chicken.jpg"
+        image: "/Website_Food Pictures/Chicken Curry/Butter Chicken.jpg"
       },
       {
         name: { en: "Kadhai Chicken", jp: "カダイチキン" },
         description: { en: "Chicken in Spicy Curry", jp: "チキンのスパイシーカレー" },
         category: { en: "Chicken", jp: "チキン" },
         price: "¥1180",
-        image: "/public/Website_Food Pictures/Chicken Curry/Kadhai Chicken.jpeg"
+        image: "/Website_Food Pictures/Chicken Curry/Kadhai Chicken.jpeg"
       },
       {
         name: { en: "Chicken Tikka Masala", jp: "チキンティッカマサラ" },
         description: { en: "Roasted Marinated Chicken in Spiced Curry Sauce", jp: "マリネチキンのローストスパイスカレーソース" },
         category: { en: "Chicken", jp: "チキン" },
         price: "¥1180",
-        image: "/public/Website_Food Pictures/Chicken Curry/Chicken Tikka Masala.jpg"
+        image: "/Website_Food Pictures/Chicken Curry/Chicken Tikka Masala.jpg"
       },
       {
         name: { en: "Chicken Mughlai", jp: "チキンムグライ" },
         description: { en: "Mild chicken curry with boiled egg", jp: "マイルドチキンカレーゆで卵添え" },
         category: { en: "Chicken", jp: "チキン" },
         price: "¥1280",
-        image: "/public/Website_Food Pictures/Chicken Curry/Chicken Mughlai.jpg"
+        image: "/Website_Food Pictures/Chicken Curry/Chicken Mughlai.jpg"
       }
   ],
   vegetable: [
@@ -205,63 +205,63 @@ const menuItems = {
       "description": { "en": "Mixed Lentils Fried with Cumin, Onion & Garlic", "jp": "カミン、オニオン、ガーリックで揚げたレンズ豆のミックス" },
       "category": { "en": "Vegetable", "jp": "野菜" },
       "price": "¥980",
-      "image": "/public/Website_Food Pictures/Vegetable Delicacies/Daal Fry.jpg"
+      "image": "/Website_Food Pictures/Vegetable Delicacies/Daal Fry.jpg"
     },
     {
       "name": { "en": "Vegetable Curry", "jp": "ベジタブルカレー" },
       "description": { "en": "Potato, Green Peas, Green Beans, Mushrooms, Carrot, Cauliflower Curry", "jp": "ジャガイモ、グリーンピース、インゲン、マッシュルーム、ニンジン、カリフラワーカレー" },
       "category": { "en": "Vegetable", "jp": "野菜" },
       "price": "¥1180",
-      "image": "/public/Website_Food Pictures/Vegetable Delicacies/"
+      "image": "/Website_Food Pictures/Vegetable Delicacies/"
     },
     {
       "name": { "en": "Aloo Bhindi", "jp": "アルービンディ" },
       "description": { "en": "Potato & Okra Cooked in Light Curry Sauce", "jp": "ジャガイモとオクラのあっさりカレーソース" },
       "category": { "en": "Vegetable", "jp": "野菜" },
       "price": "¥1280",
-      "image": "/public/Website_Food Pictures/Vegetable Delicacies/Aloo Bhindi.jpg"
+      "image": "/Website_Food Pictures/Vegetable Delicacies/Aloo Bhindi.jpg"
     },
     {
       "name": { "en": "Aloo Baigan", "jp": "アルー・バインガン" },
       "description": { "en": "Potato & Eggplant Cooked in Light Curry Sauce", "jp": "ジャガイモとナスのあっさりカレーソース" },
       "category": { "en": "Vegetable", "jp": "野菜" },
       "price": "¥1280",
-      "image": "/public/Website_Food Pictures/Vegetable Delicacies/Aloo Baigan.jpg"
+      "image": "/Website_Food Pictures/Vegetable Delicacies/Aloo Baigan.jpg"
     },
     {
       "name": { "en": "Palak Paneer", "jp": "パラック・パニール" },
       "description": { "en": "Indian Cottage Cheese in Spinach Sauce", "jp": "インドのカッテージチーズのほうれん草ソース" },
       "category": { "en": "Vegetable", "jp": "野菜" },
       "price": "¥1280",
-      "image": "/public/Website_Food Pictures/Vegetable Delicacies/Palak Paneer.jpg"
+      "image": "/Website_Food Pictures/Vegetable Delicacies/Palak Paneer.jpg"
     },
     {
       "name": { "en": "Sahi Paneer", "jp": "シャヒパニール" },
       "description": { "en": "Indian Cottage Cheese in Spicy Sauce", "jp": "インド産カッテージチーズのスパイシーソース添え" },
       "category": { "en": "Vegetable", "jp": "野菜" },
       "price": "¥1280",
-      "image": "/public/Website_Food Pictures/Vegetable Delicacies/Shahi Paneer .png"
+      "image": "/Website_Food Pictures/Vegetable Delicacies/Shahi Paneer .png"
     },
     {
       "name": { "en": "Palak Mushroom", "jp": "パラックキノコ" },
       "description": { "en": "Mushroom in Spinach Sauce", "jp": "キノコのほうれん草ソース" },
       "category": { "en": "Vegetable", "jp": "野菜" },
       "price": "¥1280",
-      "image": "/public/Website_Food Pictures/Vegetable Delicacies/Palak Mushroom-1.JPG"
+      "image": "/Website_Food Pictures/Vegetable Delicacies/Palak Mushroom-1.JPG"
     },
     {
       "name": { "en": "Paneer Butter Masala", "jp": "パニールバターマサラ" },
       "description": { "en": "Indian Cottage Cheese Cooked in Butter Masala Sauce", "jp": "インド産カッテージチーズのバターマサラソース煮" },
       "category": { "en": "Vegetable", "jp": "野菜" },
       "price": "¥1180",
-      "image": "/public/Website_Food Pictures/Vegetable Delicacies/Paneer Butter Masala .jpg"
+      "image": "/Website_Food Pictures/Vegetable Delicacies/Paneer Butter Masala .jpg"
     },
     {
       "name": { "en": "Chana Masala", "jp": "チャナマサラ" },
       "description": { "en": "Chickpeas Cooked in Aromatic Spices", "jp": "ひよこ豆の香り豊かなスパイス煮" },
       "category": { "en": "Vegetable", "jp": "野菜" },
       "price": "¥1180",
-      "image": "/public/Website_Food Pictures/Vegetable Delicacies/Chana Masala-2.jpg"
+      "image": "/Website_Food Pictures/Vegetable Delicacies/Chana Masala-2.jpg"
     }
   ]
   

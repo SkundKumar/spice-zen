@@ -17,7 +17,7 @@ const drinkCategories = [
   {
     title: { en: "Beer", jp: "ビール" },
     icon: Beer,
-    image: "/public/Website_Food Pictures/Drinks/Alcohol Drink 2.jpg",
+    image: "/Website_Food Pictures/Drinks/Alcohol Drink 2.jpg",
     items: [
       { name: { en: "Nama Beer", jp: "生ビール" }, price: "¥500" },
       { name: { en: "Bottle Beer Asahi", jp: "瓶ビールアサヒ" }, price: "¥500" },
@@ -30,7 +30,7 @@ const drinkCategories = [
   {
     title: { en: "Wine & Whisky", jp: "ワイン ウィスキー" },
     icon: Wine,
-    image: "/public/Website_Food Pictures/Drinks/Alcohol Drinks .jpg",
+    image: "/Website_Food Pictures/Drinks/Alcohol Drinks .jpg",
     items: [
       { 
         name: { en: "Indian Wines", jp: "インドワイン" },

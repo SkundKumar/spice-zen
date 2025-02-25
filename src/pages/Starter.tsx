@@ -21,7 +21,7 @@ const menuItems: MenuItem[] = [
     description: { en: "Spicy Chicken Barbeque (4 pc)", jp: "スパイシーチキンバーベキュー" },
     price: "¥500",
     category: { en: "Grills", jp: "グリル" },
-    image: "/public/Website_Food Pictures/Starters & Grills/Chicken Tikka .jpg",
+    image: "/Website_Food Pictures/Starters & Grills/Chicken Tikka .jpg",
     size: "medium",
     mobsize: "medium"
   },
@@ -30,7 +30,7 @@ const menuItems: MenuItem[] = [
     description: { en: "Tandoori Grilled Chicken Marinated in Spices for 24 hours (1 Leg pc)", jp: "24時間スパイスに漬け込んだタンドリーグリルチキン" },
     price: "¥550",
     category: { en: "Grills", jp: "グリル" },
-    image: "/public/Website_Food Pictures/Starters & Grills/Tandoori Chicken.jpg",
+    image: "/Website_Food Pictures/Starters & Grills/Tandoori Chicken.jpg",
     size: "small",
     mobsize: "large"
   },
@@ -39,7 +39,7 @@ const menuItems: MenuItem[] = [
     description: { en: "Garlic-Flavoured Chicken Barbeque (4 pc)", jp: "ガーリック風味のチキンバーベキュー" },
     price: "¥600",
     category: { en: "Grills", jp: "グリル" },
-    image: "/public/Website_Food Pictures/Starters & Grills/Garlic Tikka .jpg",
+    image: "/Website_Food Pictures/Starters & Grills/Garlic Tikka .jpg",
     size: "small",
     mobsize: "large"
   },
@@ -48,7 +48,7 @@ const menuItems: MenuItem[] = [
     description: { en: "Spicy Fish Barbeque (4 pc)", jp: "スパイシーな魚のバーベキュー" },
     price: "¥700",
     category: { en: "Grills", jp: "グリル" },
-    image: "/public/Website_Food Pictures/Starters & Grills/Fish-Tikka-2.jpg",
+    image: "/Website_Food Pictures/Starters & Grills/Fish-Tikka-2.jpg",
     size: "small",
     mobsize: "medium"
   },
@@ -57,7 +57,7 @@ const menuItems: MenuItem[] = [
     description: { en: "Spicy Minced Chicken Skewer (4 pc)", jp: "スパイシーな鶏ひき肉の串" },
     price: "¥800",
     category: { en: "Grills", jp: "グリル" },
-    image: "/public/Website_Food Pictures/Starters & Grills/Seek Kebab.v1.jpg",
+    image: "/Website_Food Pictures/Starters & Grills/Seek Kebab.v1.jpg",
     size: "small",
     mobsize: "small"
   },
@@ -66,7 +66,7 @@ const menuItems: MenuItem[] = [
     description: { en: "Fried patty with potato, onion & nuts filling (2 pc)", jp: "ポテト、タマネギ、ナッツを詰めたフライドバティ" },
     price: "¥500",
     category: { en: "Snacks", jp: "スナック" },
-    image: "/public/Website_Food Pictures/Starters & Grills/",
+    image: "/Website_Food Pictures/Starters & Grills/",
     size: "small",
     mobsize: "medium"
   },
@@ -75,7 +75,7 @@ const menuItems: MenuItem[] = [
     description: { en: "Tomato, cucumber, corn and lettuce salad", jp: "トマト、キュウリ、コーン、レタスのサラダ" },
     price: "¥500",
     category: { en: "Salads", jp: "サラダ" },
-    image: "/public/Website_Food Pictures/Starters & Grills/",
+    image: "/Website_Food Pictures/Starters & Grills/",
     size: "small",
     mobsize: "large"
   },
@@ -84,7 +84,7 @@ const menuItems: MenuItem[] = [
     description: { en: "Chicken, tomato, cabbage, lettuce, carrot, green pepper", jp: "鶏肉、トマト、キャベツ、レタス、玉ねぎ、にんじん、ピーマン" },
     price: "¥700",
     category: { en: "Salads", jp: "サラダ" },
-    image: "/public/Website_Food Pictures/Starters & Grills/",
+    image: "/Website_Food Pictures/Starters & Grills/",
     size: "large",
     mobsize: "large"
   }

@@ -64,7 +64,7 @@ const menuItems: MenuItem[] =
       description: { en: "Crispy indian style breads", jp: "クリスピーなインド風パン" },
       
       category: { en: "Naan/Breads", jp: "ナン/パン" },
-      image: "/public/Website_Food Pictures/Breads_Nan/Tandoori Roti.jpg",
+      image: "/Website_Food Pictures/Breads_Nan/Tandoori Roti.jpg",
       size: "small"
     },
     {
