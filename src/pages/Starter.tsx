@@ -75,7 +75,7 @@ const startersAndGrills: MenuItem[] = [
     description: { en: "Braised Cream Cheese & Cardomon Chicken (4 pc)", jp: "クリームチーズとカルドモンチキンの煮込み" },
     price: "¥800",
     category: { en: "Grills", jp: "グリル" },
-    image: "/public/Website_Food Pictures/Starters & Grills/Chicken Malai Tikka.JPG",
+    image: "/Website_Food Pictures/Starters & Grills/Chicken Malai Tikka.JPG",
     size: "small",
     mobsize: "small"
   }
@@ -87,7 +87,7 @@ const snacksAndSalads: MenuItem[] = [
     description: { en: "Fried patty with potato, onion & nuts filling (2 pc)", jp: "ポテト、タマネギ、ナッツを詰めたフライトバティ" },
     price: "¥500",
     category: { en: "Snacks", jp: "スナック" },
-    image: "/public/Website_Food Pictures/Snacks and Salad/Samosa-1.jpg",
+    image: "/Website_Food Pictures/Snacks and Salad/Samosa-1.jpg",
     size: "medium",
     mobsize: "medium"
   },
@@ -96,7 +96,7 @@ const snacksAndSalads: MenuItem[] = [
     description: { en: "Grilled Indian cottage cheese (4 pc)", jp: "インド産カッテージチーズのグリル" },
     price: "¥1000",
     category: { en: "Snacks", jp: "スナック" },
-    image: "/public/Website_Food Pictures/Snacks and Salad/Paneer Tikka .JPG",
+    image: "/Website_Food Pictures/Snacks and Salad/Paneer Tikka .JPG",
     size: "small",
     mobsize: "large"
   },
@@ -108,7 +108,7 @@ const snacksAndSalads: MenuItem[] = [
     },
     price: "¥500",
     category: { en: "Snacks", jp: "スナック" },
-    image: "/public/Website_Food Pictures/Snacks and Salad/Vegetable Pakora.JPG",
+    image: "/Website_Food Pictures/Snacks and Salad/Vegetable Pakora.JPG",
     size: "small",
     mobsize: "medium"
   },
@@ -132,7 +132,7 @@ const snacksAndSalads: MenuItem[] = [
     },
     price: "¥500",
     category: { en: "Snacks", jp: "スナック" },
-    image: "/public/Website_Food Pictures/Snacks and Salad/Onion Bhaji.jpg",
+    image: "/Website_Food Pictures/Snacks and Salad/Onion Bhaji.jpg",
     size: "small",
     mobsize: "large"
   },
