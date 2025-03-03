@@ -33,7 +33,7 @@ interface MenuItem {
       name: { en: "Chocolate Nan", jp: "チョコレートナン" },
       description: { en: "Nan with chocolate filling & honey topping", jp: "ナン チョコフィリング＆はちみつトッピング" },
       category: { en: "Naan", jp: "ナン" },
-      image: "", 
+      image: "/Website_Food Pictures/Breads_Nan/Choco Honey Nan.jpg", 
       price: "",
       size: "small",
       mobsize: "small"
@@ -42,7 +42,7 @@ interface MenuItem {
       name: { en: "Cheese Honey Nan", jp: "チーズハニーナン" },
       description: { en: "Nan with delicious cheese filling & honey topping", jp: "チーズ入りナンとハチミツトッピング" },
       category: { en: "Naan", jp: "ナン" },
-      image: "/Website_Food Pictures/Breads_Nan/Choco Honey Nan.jpg", 
+      image: "/Website_Food Pictures/Breads_Nan/Cheese Honey Nan2.jpg", 
       price: "",
       size: "small",
       mobsize: "small"
