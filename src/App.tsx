@@ -11,6 +11,7 @@ import Lunch from './pages/Lunch';
 import Naan from './pages/Naan';
 import Drinks from './pages/Drinks';
 import Starters from './pages/Starter';
+import Bento from './pages/Bento';
 function App() {
   return (
     <Router>
@@ -25,6 +26,7 @@ function App() {
         <Route path="/category/naan/breads" element={<Naan />} />
         <Route path="/category/beverage" element={<Drinks />} />
         <Route path="/category/starters" element={<Starters />} />
+        <Route path="/category/bento" element={<Bento />} />
       </Routes>
     </Router>
   );

@@ -73,16 +73,24 @@ const menuItems: MenuItem[] =
       
       category: { en: "Biryani", jp: "ベジタリアン" },
       image: "/Website_Food Pictures/Rice_Biryani/Chicken Biryani.jpg",
-      size: "medium"
+      size: "large"
     },
     {
       name: { en: "Special Meal Set", jp: "スペシャルミールセット" },
       description: { en: "Slow-cooked red kidney beans with aromatic basmati rice", jp: "じっくり煮込んだレッドキドニービーンズと香り高いバスマティ米" },
       
       category: { en: "Special", jp:"スペシャルミールセット" },
-      image: "",
+      image: "/public/Website_Food Pictures/Special Meal Sets/Non veg Thali_Dinner.JPG",
       size: "small"
-    }
+    },
+    {
+    name: { en: "Takeout Indian Bento", jp: "お持ち帰り インド弁当" },
+    description: { en:"A Packed Set (Takeout only)", jp: "パックセット (テイクアウト限定)" },
+    
+    category: { en: "Bento", jp:"" },
+    image: "/Website_Food Pictures/Bento Box/Bento Box_Chicken Curry Nan-3.jpg",
+    size: "small"
+  }
   ];
 
 function Menu() {
