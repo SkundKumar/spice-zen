@@ -15,7 +15,7 @@ function Bento() {
     {
       title: { en: "Chicken", jp: "チキン" },
       price: { en: "¥600 (tax included)", jp: "¥600 (税込)" },
-      image: "/public/Website_Food Pictures/Bento Box/Bento Box_Chicken Curry Nan-3.jpg",
+      image: "/Website_Food Pictures/Bento Box/Bento Box_Chicken Curry Nan-3.jpg",
       items: [
         { name: { en: "CHICKEN CURRY", jp: "チキンカレー" } },
         { name: { en: "SAAG CHICKEN", jp: "サーグ・チキン" } },
@@ -26,7 +26,7 @@ function Bento() {
     {
       title: { en: "Mutton", jp: "マトン" },
       price: { en: "¥600 (tax included)", jp: "¥600 (税込)" },
-      image: "/public/Website_Food Pictures/Bento Box/Take_Out_Mutton Curry Nan-2.jpg",
+      image: "/Website_Food Pictures/Bento Box/Take_Out_Mutton Curry Nan-2.jpg",
       items: [
         { name: { en: "MUTTON CURRY", jp: "マトンカレー" } },
         { name: { en: "SAAG MUTTON", jp: "サーグ・マトン" } }
@@ -35,7 +35,7 @@ function Bento() {
     {
       title: { en: "Seafood", jp: "シーフード" },
       price: { en: "¥600 (tax included)", jp: "¥600 (税込)" },
-      image: "/public/Website_Food Pictures/Bento Box/Take_Out_Seafood Curry Nan-1.jpg",
+      image: "/Website_Food Pictures/Bento Box/Take_Out_Seafood Curry Nan-1.jpg",
       items: [
         { name: { en: "SEAFOOD CURRY", jp: "海鮮カレー" } },
         { name: { en: "SAAG SEAFOOD", jp: "サーグシーフード" } }
@@ -44,7 +44,7 @@ function Bento() {
     {
       title: { en: "Vegetarian", jp: "ベジタリアン" },
       price: { en: "¥600 (tax included)", jp: "¥600 (税込)" },
-      image: "/public/Website_Food Pictures/Bento Box/Take out_Vegetarien lunch set .jpg",
+      image: "/Website_Food Pictures/Bento Box/Take out_Vegetarien lunch set .jpg",
       items: [
         { name: { en: "VEGETABLE CURRY", jp: "野菜カレー" } },
         { name: { en: "PANEER CURRY", jp: "パニールカレー" } },
