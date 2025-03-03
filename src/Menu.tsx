@@ -104,13 +104,13 @@ function Menu() {
     
       gsap.fromTo(
         cardsRef.current.filter(Boolean),
-        { opacity: 0, y: 50 },
+        { opacity: 0, y: 0 },
         {
           opacity: 1,
           y: 0,
-          duration: 1.2,
-          ease: "power4.out",
-          stagger: 0.2, // Batching effect
+          duration: 1,
+          ease: "power2.out",
+          stagger: 0, // Batching effect
           scrollTrigger: {
             trigger: gridRef.current,
             start: "top bottom-=100",
