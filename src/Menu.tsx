@@ -80,7 +80,7 @@ const menuItems: MenuItem[] =
       description: { en: "Slow-cooked red kidney beans with aromatic basmati rice", jp: "じっくり煮込んだレッドキドニービーンズと香り高いバスマティ米" },
       
       category: { en: "Special", jp:"スペシャルミールセット" },
-      image: "/public/Website_Food Pictures/Special Meal Sets/Non veg Thali_Dinner.JPG",
+      image: "/Website_Food Pictures/Special Meal Sets/Non veg Thali_Dinner.JPG",
       size: "small"
     },
     {
