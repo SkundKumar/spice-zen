@@ -189,7 +189,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
             <div className="fade-in-left">
               <img 
-                src="/Website_Food Pictures/Restaurant pictures/Extrior-1.jpeg" 
+                src="/Website_Food Pictures/Restaurant pictures/Exterior-1.jpg" 
                 alt="Restaurant ambiance" 
                 className="rounded-3xl shadow-2xl"
               />
