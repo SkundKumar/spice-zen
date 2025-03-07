@@ -329,7 +329,7 @@ function MenuSection({ title, items, language, Icon }: {
             <div className="card-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 opacity-0 transition-opacity duration-300" />
             <div className="card-content absolute inset-x-0 bottom-0 p-4 translate-y-8 opacity-0">
               <div className="flex justify-between items-start gap-2 mb-2">
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-3xl font-semibold text-white">
                   {item.name[language]}
                 </h3>
                 <span className="text-yellow-400 font-bold text-lg">{item.price}</span>

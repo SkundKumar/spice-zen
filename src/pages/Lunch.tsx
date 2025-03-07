@@ -64,14 +64,14 @@ function Lunch() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Sun className="w-8 h-8 text-amber-600" />
-            <h1 className="text-3xl font-serif text-gray-900"><a href='/menu'>North Park</a></h1>
+            <Sun className="w-10 h-10 text-amber-600" />
+            <h1 className="text-5xl font-serif text-gray-900"><a href='/menu'>North Park</a></h1>
           </div>
           <button
             onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}
             className="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-200/50 backdrop-blur-lg hover:bg-amber-300/50 transition-all duration-300 shadow-md hover:shadow-lg"
           >
-            <span className="text-sm font-medium text-amber-700">
+            <span className="text-base font-medium text-amber-700">
               {language === 'en' ? '日本語' : 'English'}
             </span>
           </button>
@@ -87,10 +87,10 @@ function Lunch() {
           
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
             <div className="flex items-center gap-3 mb-4">
-              <UtensilsCrossed className="w-8 h-8" />
-              <Clock className="w-8 h-8" />
+              <UtensilsCrossed className="w-10 h-10" />
+              <Clock className="w-10 h-10" />
             </div>
-            <h1 className="text-5xl font-bold mb-4">
+            <h1 className="text-7xl font-bold mb-4">
               {language === 'en' ? "Our Menu" : "メニュー"}
             </h1>
           </div>

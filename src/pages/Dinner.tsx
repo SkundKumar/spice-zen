@@ -35,11 +35,11 @@ function Accordion({ title, items, language }: AccordionProps) {
         className="w-full p-6 flex items-center justify-between"
       >
         <div className="flex items-center gap-3">
-          <UtensilsCrossed className="w-6 h-6 text-orange-600" />
-          <h2 className="text-2xl font-serif text-gray-900">{title[language]}</h2>
+          <UtensilsCrossed className="w-8 h-8 text-orange-600" />
+          <h2 className="text-3xl font-serif text-gray-900">{title[language]}</h2>
         </div>
         <ChevronDown
-          className={`w-6 h-6 text-gray-600 transition-transform duration-300 ${
+          className={`w-8 h-8 text-gray-600 transition-transform duration-300 ${
             isOpen ? 'transform rotate-180' : ''
           }`}
         />
@@ -71,13 +71,13 @@ function Accordion({ title, items, language }: AccordionProps) {
                 <span className="text-orange-300 text-sm font-medium">
                   {item.category[language]}
                 </span>
-                <h3 className="text-white text-3xl font-semibold mt-1">
+                <h3 className="text-white text-4xl font-semibold mt-1">
                   {item.name[language]}
                 </h3>
-                <p className="text-white text-md mt-1 ">
+                <p className="text-white text-lg mt-1 ">
                   {item.description[language]}
                 </p>
-                <p className="text-orange-300 font-semibold mt-2">{item.price}</p>
+                <p className="text-orange-300 font-semibold mt-2 text-lg">{item.price}</p>
               </div>
             </motion.div>
           ))}
@@ -330,7 +330,7 @@ function Dinner() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <h1 className="text-3xl font-serif text-gray-900"><a href='/menu'>North Park</a></h1>
+            <h1 className="text-4xl font-serif text-gray-900"><a href='/menu'>North Park</a></h1>
           </div>
           <button
             onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}

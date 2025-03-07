@@ -150,13 +150,13 @@ function Naan() {
         >
           <div className="container mx-auto px-6 flex items-center justify-between">
             <div className="flex items-center gap-3">
-            <h1 className="text-3xl font-serif text-gray-900"><a href='/menu'>North Park</a></h1>
+            <h1 className="text-2xl font-serif text-gray-900"><a href='/menu'>North Park</a></h1>
             </div>
             <button
               onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-orange-200/50 backdrop-blur-lg hover:bg-orange-300/50 transition-all duration-300 shadow-md hover:shadow-lg"
             >
-              <span className="text-sm font-medium text-orange-700">
+              <span className="text-md font-medium text-orange-700">
                 {language === 'en' ? '日本語' : 'English'}
               </span>
             </button>
@@ -187,7 +187,7 @@ function Naan() {
         initial={{ opacity: 0, y: 20 }} 
         animate={{ opacity: 1, y: 0 }} 
         transition={{ duration: 1, delay: 0.3 }}
-        className="mt-5 text-lg text-orange-400 max-w-2xl"
+        className="mt-5 text-2xl text-orange-400 max-w-2xl"
       >
         
       </motion.p>
@@ -226,12 +226,12 @@ ${item.mobsize === 'large' ? 'sm:col-span-2 sm:row-span-2 md:col-span-1 md:row-s
           className="absolute inset-x-0 bottom-0 p-4 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out"
         >
           <div className="flex justify-between items-start gap-2 mb-2">
-            <h3 className="text-lg font-semibold text-white leading-tight">
+            <h3 className="text-2xl font-semibold text-white leading-tight">
               {item.name[language]}
             </h3>
             <span className="text-yellow-400 font-bold text-md">{item.price}</span>
           </div>
-          <p className="text-gray-200 text-sm leading-relaxed mb-2 line-clamp-2">
+          <p className="text-gray-200 text-md leading-relaxed mb-2 line-clamp-2">
             {item.description[language]}
           </p>
           

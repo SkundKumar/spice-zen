@@ -217,9 +217,9 @@ function Special() {
                 </div>
 
                 <div className="space-y-8 mt-12">
-                    <img className='rounded-xl shadow-lg' src="/public/Website_Food Pictures/Special Meal Sets/Children Menu_Aug 2024.jpg" alt="Children Menu" />
-                    <img className='rounded-xl shadow-lg' src="/public/Website_Food Pictures/Special Meal Sets/Family Set_Dinner Course-1.png" alt="Family Set Dinner Course" />
-                    <img className='rounded-xl shadow-lg' src="/public/Website_Food Pictures/Special Meal Sets/Party Course .png" alt="Party Course" />
+                    <img className='rounded-xl shadow-lg' src="/Website_Food Pictures/Special Meal Sets/Children Menu_Aug 2024.jpg" alt="Children Menu" />
+                    <img className='rounded-xl shadow-lg' src="/Website_Food Pictures/Special Meal Sets/Family Set_Dinner Course-1.png" alt="Family Set Dinner Course" />
+                    <img className='rounded-xl shadow-lg' src="/Website_Food Pictures/Special Meal Sets/Party Course .png" alt="Party Course" />
                 </div>
             </main>
         </div>
