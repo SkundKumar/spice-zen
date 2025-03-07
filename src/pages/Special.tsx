@@ -82,7 +82,8 @@ const menuItems: MenuItem[] =
           { name: { en: "Basmati Rice", jp: "バスマティライス（インド米）" }, price: "" },
           { name: { en: "Softdrink", jp: "ソフトドリンク" }, price: "" }
         ]
-      }
+      },
+    
   ];
 
 function Special() {
@@ -219,6 +220,7 @@ ${item.mobsize === 'large' ? 'sm:col-span-2 sm:row-span-2 md:col-span-1 md:row-s
           <p className="text-gray-200 text-sm leading-relaxed mb-2 line-clamp-2">
             {item.description[language]}
           </p>
+         
           
           {item.variations && item.variations.length > 0 && (
   <div className="mt-3 mb-3">
@@ -232,14 +234,26 @@ ${item.mobsize === 'large' ? 'sm:col-span-2 sm:row-span-2 md:col-span-1 md:row-s
       ))}
     </ul>
   </div>
+  
 )}
+
           <span className="inline-block text-xs text-orange-400 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1 border border-orange-400/30">
             {item.category[language]}
           </span>
+          
         </div>
+        
       </div>
+      
     ))}
+    
   </div>
+  <img className='mt-10 rounded-xl'  src="/public/Website_Food Pictures/Special Meal Sets/Children Menu_Aug 2024.jpg" alt="" />
+  
+  
+  <img className='mt-10 rounded-xl'  src="/public/Website_Food Pictures/Special Meal Sets/Family Set_Dinner Course-1.png" alt="" />
+  <img className='mt-10 rounded-xl'  src="/public/Website_Food Pictures/Special Meal Sets/Party Course .png" alt="" />
+  <img className='mt-10 rounded-xl'  src="" alt="" />
 </main>
 
       </div>
