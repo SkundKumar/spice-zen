@@ -1,5 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { MapPin, Clock, Phone, Mail, ChevronDown, Utensils, MessageSquare, Sparkles, Heart, Star, Award, Users, Truck } from 'lucide-react';
+import { MapPin, Clock, Phone, Mail, ChevronDown, Utensils, MessageSquare, Sparkles, Heart, Star, Award, Users, Truck} from 'lucide-react';
+import { CiFacebook } from "react-icons/ci";
+import { FaInstagram } from "react-icons/fa";
+
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -137,7 +140,7 @@ const Home = () => {
               ))}
               <a className={`relative transition-colors duration-300 ${
                     isScrolled ? 'text-gray-800' : 'text-white'
-                  }  hover:text-orange-600`}href="/galary">Galary</a>
+                  }  hover:text-orange-600`}href="/galary">Gallery</a>
             </div>
             
             <button
@@ -207,33 +210,26 @@ const Home = () => {
             <p className="text-gray-600 text-lg">Enjoy our delicious meals from the comfort of your home</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer" 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="https://www.ubereats.com/jp-en/store/north-park-indian-restaurant-%26-cafe-%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%8F%E3%83%BC%E3%82%AF-%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%82%A2%E3%83%B3%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%26%E3%82%AB%E3%83%95%E3%82%A7/6H00l28aSHKV5y8Miga5ig?diningMode=PICKUP" target="_blank" rel="noopener noreferrer" 
                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up">
-              <img src="https://images.unsplash.com/photo-1635363638580-6c3c29f51a32?q=80&w=300&auto=format&fit=crop" 
+              <img src="https://1000logos.net/wp-content/uploads/2020/08/Uber-Eats-Logo-2018.jpg" 
                    alt="Uber Eats" 
-                   className="w-32 h-32 object-contain mx-auto mb-4"/>
+                   className="w-62 h-36 object-contain mx-auto mb-4"/>
               <h3 className="text-xl font-bold text-center mb-2">Uber Eats</h3>
               <p className="text-gray-600 text-center">Fast delivery to your doorstep</p>
             </a>
             
-            <a href="https://www.demaecan.com" target="_blank" rel="noopener noreferrer" 
+            <a href="https://demae-can.com/shop/menu/3392106 " target="_blank" rel="noopener noreferrer" 
                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-100">
-              <img src="https://images.unsplash.com/photo-1590004953392-5aba2e72269a?q=80&w=300&auto=format&fit=crop" 
+              <img src="https://vos.line-scdn.net/strapi-cluster-instance-bucket-84/1_62eaf29e06.png" 
                    alt="Demae-can" 
-                   className="w-32 h-32 object-contain mx-auto mb-4"/>
+                   className="w-96  object-contain mx-auto mb-4"/>
               <h3 className="text-xl font-bold text-center mb-2">出前館</h3>
               <p className="text-gray-600 text-center">Japan's favorite delivery service</p>
             </a>
             
-            <a href="https://www.foodpanda.com" target="_blank" rel="noopener noreferrer" 
-               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-200">
-              <img src="https://images.unsplash.com/photo-1626825719041-d2c34c4c0b8e?q=80&w=300&auto=format&fit=crop" 
-                   alt="Food Panda" 
-                   className="w-32 h-32 object-contain mx-auto mb-4"/>
-              <h3 className="text-xl font-bold text-center mb-2">Food Panda</h3>
-              <p className="text-gray-600 text-center">Quick and reliable delivery</p>
-            </a>
+            
           </div>
         </div>
       </section>
@@ -260,7 +256,7 @@ const Home = () => {
                 {translations[language].para}
               </p>
               <div className='w-32 p-2 flex justify-center items-center rounded-lg bg-orange-500 text-white hover:bg-white hover:text-orange-500  transition-all duration-300 hover:drop-shadow-2xl'>
-                <a className=" flex items-center justify-center font-semibold " href="">Explore Galary</a>
+                <a className=" flex items-center justify-center font-semibold " href="/galary">Explore Gallery</a>
             </div>
             </div>
             
@@ -307,7 +303,9 @@ const Home = () => {
                 
                 
                 <p className="text-gray-600 mb-4">
-                  "以前と店名が変わったようですが、スタッフさんなどは変わらない様子。LINE友達登録でドリンクサービスしていただけます"
+                  "I visited during dinner time.
+
+I had the chicken biryani, and the yogurt sauce on a separate plate was sour, refreshing, and delicious, but I wasn't that good at it, so I was glad I was able"
                 </p>
                 <p className="font-semibold"></p>
               </div>
@@ -371,7 +369,7 @@ Just at the entrance, you can observe a lot of decorations that you normally don
                   <h3 className="text-xl font-semibold">Hours</h3>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-gray-600">Monday - Sunday: '11:00 - 15:00' & '17:00 - 23:30'
+                  <p className="text-gray-600">Monday - Sunday: '11:00 - 15:00' & '17:00 - 22:30'
                   </p>
                
                 </div>
@@ -420,6 +418,27 @@ Just at the entrance, you can observe a lot of decorations that you normally don
         <div className="container mx-auto px-6 text-center scale-up">
           <p className="text-2xl font-bold mb-4 gradient-text">North Park, Indian Restaurant & Café</p>
           <p className="text-gray-400">The Authentic taste of Indian</p>
+          <div className="flex justify-center space-x-6 mt-8">
+            <a 
+              href="https://www.facebook.com/share/1FJh5xvfWj/?mibextid=wwXIfr" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-orange-500 transition-colors duration-300"
+            >
+              <CiFacebook className="w-6 h-6" />
+            </a>
+            <a 
+              href="https://www.instagram.com/northpark.indian?igsh=MXUxcWNxbno4MzFzMw==" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-orange-500 transition-colors duration-300"
+            >
+              <FaInstagram className="w-6 h-6" />
+            </a>
+            
+              
+            
+          </div>
           <div className="mt-8 text-sm text-gray-400">
             © 2025 North Park, Indian Restaurant & Café. All rights reserved.
           </div>
