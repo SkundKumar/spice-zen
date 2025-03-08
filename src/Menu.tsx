@@ -135,6 +135,11 @@ function Menu() {
             <div className="flex items-center gap-3">
             <h1 className="text-4xl font-serif text-gray-900"><a href='/'>North Park</a></h1>
             </div>
+            <div className='space-x-4'>
+              <a href="">Home</a>
+              <a href="">Galary</a>
+              <a href=""></a>
+            </div>
             <button
               onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-orange-200/50 backdrop-blur-lg hover:bg-orange-300/50 transition-all duration-300 shadow-md hover:shadow-lg"

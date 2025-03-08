@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { MapPin, Clock, Phone, Mail, ChevronDown, Utensils, MessageSquare, Sparkles, Heart, Star, Award, Users } from 'lucide-react';
+import { MapPin, Clock, Phone, Mail, ChevronDown, Utensils, MessageSquare, Sparkles, Heart, Star, Award, Users, Truck } from 'lucide-react';
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -11,27 +11,26 @@ const Home = () => {
 
   const translations = {
     en: {
-      title: "North Park",
-      subtitle: "where authentic Indian flavors and culinary excellence awaits you!",
+      title: "North Park, Indian Restaurant & Café",
+      subtitle: "The Authentic taste of India",
       exploreMenu: "Explore Menu",
       visitUs: "Visit Us",
       address: "1-7 Higashimanabemachi, Tsuchiura, Ibaraki 300-0052",
       connect: "Connect With Us",
       toggleLanguage: "日本語",
       explore: "Explore Full Menu",
-      para:"At our Indian restaurant, we offer a warm and vibrant atmosphere that reflects the rich culture and traditions of India. Our spacious dining area can comfortably host both intimate dinners and large gatherings, making it an ideal spot for any occasion. We also provide ample free parking, ensuring that your visit is convenient from start to finish. Inside, you'll find a beautifully decorated interior, adorned with traditional Indian motifs and colors, creating an inviting ambiance that enhances the authentic dining experience we offer."
-      
+      para: "At our Indian restaurant, we offer a warm and vibrant atmosphere that reflects the rich culture and traditions of India. Our spacious dining area can comfortably host both intimate dinners and large gatherings, making it an ideal spot for any occasion. We also provide ample free parking, ensuring that your visit is convenient from start to finish. Inside, you'll find a beautifully decorated interior, adorned with traditional Indian motifs and colors, creating an inviting ambiance that enhances the authentic dining experience we offer."
     },
     jp: {
       title: "スパイス＆禅",
-      subtitle: "インドの味と日本の優雅さの融合",
+      subtitle: "インドの本場の味",
       exploreMenu: "メニューを見る",
       visitUs: "お店に行く",
       address: "東京都渋谷区1-2-3 150-0002",
       connect: "お問い合わせ",
       toggleLanguage: "English",
       explore: "メニュー",
-      para:" 私たちのインド料理レストランでは、インドの豊かな文化と伝統を反映した温かく活気のある雰囲気を提供しています。広々としたダイニングエリアは、親しいディナーから大規模な集まりまで、どんなシーンにも対応できる理想的な空間です。また、無料の広い駐車場を完備しており、訪れる際の利便性も抜群です。店内は、伝統的なインドのモチーフとカラーで美しく装飾されており、本格的なインド料理を楽しむための魅力的な雰囲気を演出しています。"
+      para: " 私たちのインド料理レストランでは、インドの豊かな文化と伝統を反映した温かく活気のある雰囲気を提供しています。広々としたダイニングエリアは、親しいディナーから大規模な集まりまで、どんなシーンにも対応できる理想的な空間です。また、無料の広い駐車場を完備しており、訪れる際の利便性も抜群です。店内は、伝統的なインドのモチーフとカラーで美しく装飾されており、本格的なインド料理を楽しむための魅力的な雰囲気を演出しています。"
     },
   };
 
@@ -108,17 +107,19 @@ const Home = () => {
           isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
         }`}
       >
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold gradient-text">{translations[language].title}</div>
-            <div className="hidden md:flex space-x-8">
+        <div className="container mx-auto px-1 py-6">
+          <div className="flex items-center  justify-between">
+            <div className={`text-md md:text-2xl font-bold ${isScrolled ? 'text-black' : 'text-white'}`}>
+              {translations[language].title}
+            </div>
+            <div className="hidden md:flex space-x-8  mr-36">
               {['home', 'about', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className={`relative text-white hover:text-orange-600 transition-colors duration-300 ${
-                    isScrolled ? 'text-black' : 'text-white'
-                  } ${activeSection === section ? 'text-orange-600' : ''}`}
+                  className={`relative transition-colors duration-300 ${
+                    isScrolled ? 'text-gray-800' : 'text-white'
+                  } ${activeSection === section ? 'text-orange-600' : ''} hover:text-orange-600`}
                 >
                   <span className="capitalize">{section}</span>
                   {activeSection === section && (
@@ -129,7 +130,9 @@ const Home = () => {
             </div>
             <button
               onClick={toggleLanguage}
-              className="px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition"
+              className={`px-4 py-2 ${isScrolled ? 'bg-orange-500' : 'bg-white'} ${
+                isScrolled ? 'text-white' : 'text-orange-500'
+              } rounded-full hover:bg-orange-600 hover:text-white transition`}
             >
               {translations[language].toggleLanguage}
             </button>
@@ -151,7 +154,7 @@ const Home = () => {
           <div className="px-4 space-y-8 scale-up">
             <div className="relative inline-block">
               <Sparkles className="absolute -top-8 -left-8 w-6 h-6 text-orange-400 floating" />
-              <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
                 {translations[language].title}
               </h1>
               <Sparkles className="absolute -bottom-8 -right-8 w-6 h-6 text-orange-400 floating" />
@@ -178,6 +181,48 @@ const Home = () => {
         )}
       </section>
 
+      {/* Delivery Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12 fade-in-up">
+            <div className="inline-flex items-center space-x-3 mb-4">
+              <Truck className="text-orange-600 w-8 h-8" />
+              <h2 className="text-4xl font-bold">Food Delivery</h2>
+            </div>
+            <p className="text-gray-600 text-lg">Enjoy our delicious meals from the comfort of your home</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer" 
+               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up">
+              <img src="https://images.unsplash.com/photo-1635363638580-6c3c29f51a32?q=80&w=300&auto=format&fit=crop" 
+                   alt="Uber Eats" 
+                   className="w-32 h-32 object-contain mx-auto mb-4"/>
+              <h3 className="text-xl font-bold text-center mb-2">Uber Eats</h3>
+              <p className="text-gray-600 text-center">Fast delivery to your doorstep</p>
+            </a>
+            
+            <a href="https://www.demaecan.com" target="_blank" rel="noopener noreferrer" 
+               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-100">
+              <img src="https://images.unsplash.com/photo-1590004953392-5aba2e72269a?q=80&w=300&auto=format&fit=crop" 
+                   alt="Demae-can" 
+                   className="w-32 h-32 object-contain mx-auto mb-4"/>
+              <h3 className="text-xl font-bold text-center mb-2">出前館</h3>
+              <p className="text-gray-600 text-center">Japan's favorite delivery service</p>
+            </a>
+            
+            <a href="https://www.foodpanda.com" target="_blank" rel="noopener noreferrer" 
+               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-200">
+              <img src="https://images.unsplash.com/photo-1626825719041-d2c34c4c0b8e?q=80&w=300&auto=format&fit=crop" 
+                   alt="Food Panda" 
+                   className="w-32 h-32 object-contain mx-auto mb-4"/>
+              <h3 className="text-xl font-bold text-center mb-2">Food Panda</h3>
+              <p className="text-gray-600 text-center">Quick and reliable delivery</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* About Us Section */}
       <section id="about" ref={aboutRef} className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
@@ -199,8 +244,11 @@ const Home = () => {
               <p className="text-gray-600 leading-relaxed">
                 {translations[language].para}
               </p>
-              
+              <div className='w-32 p-2 flex justify-center items-center rounded-lg bg-orange-500 text-white hover:bg-white hover:text-orange-500  transition-all duration-300 hover:drop-shadow-2xl'>
+                <a className=" flex items-center justify-center font-semibold " href="">Explore Galary</a>
             </div>
+            </div>
+            
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
@@ -233,14 +281,42 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="text-center fade-in-up">
-            <div className="inline-flex items-center space-x-2 mb-4">
+          {/* Enhanced Press Coverage Section */}
+          <div className="text-center fade-in-up mt-16">
+            <div className="inline-flex items-center space-x-2 mb-8">
               <Award className="text-orange-600 w-8 h-8" />
-              <h3 className="text-2xl font-bold">Press Coverage</h3>
+              <h3 className="text-2xl font-bold">Press Coverage & Reviews</h3>
             </div>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-            以前と店名が変わったようですが、スタッフさんなどは変わらない様子。LINE友達登録でドリンクサービスしていただけます
-            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto ">
+              <div className="bg-white p-6 rounded-xl shadow-lg ">
+                
+                
+                <p className="text-gray-600 mb-4">
+                  "以前と店名が変わったようですが、スタッフさんなどは変わらない様子。LINE友達登録でドリンクサービスしていただけます"
+                </p>
+                <p className="font-semibold"></p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-lg">
+                
+                <p className="text-gray-600 mb-4">
+                  "It's a savior when your body is tired.
+
+Grilled dishes such as tandoori chicken and chicken malai tikka are exquisite. It's soft, not spicy, and the combination of yogurt and spices is exquisite"
+                </p>
+                <p className="font-semibold"></p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-lg">
+                
+                <p className="text-gray-600 mb-4">
+                  "Indian food is one of my favorites and I was very pleased with my experience and the dishes I tried in this restaurant.
+
+Just at the entrance, you can observe a lot of decorations that you normally don't find in other indian restaurants. Then inside, the whole atmosphere makes you feel like you are in a small part of India"
+                </p>
+                <p className="font-semibold"></p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -280,7 +356,9 @@ const Home = () => {
                   <h3 className="text-xl font-semibold">Hours</h3>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-gray-600">Monday - Sunday: 11:00 AM - 10:00 PM</p>
+                  <p className="text-gray-600">Monday - Sunday: '11:00 - 15:00' & '17:00 - 23:30'
+                  </p>
+               
                 </div>
               </div>
               <div>
@@ -325,10 +403,10 @@ const Home = () => {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-6 text-center scale-up">
-          <p className="text-2xl font-bold mb-4 gradient-text">North Park</p>
-          <p className="text-gray-400">Where tradition meets innovation</p>
+          <p className="text-2xl font-bold mb-4 gradient-text">North Park, Indian Restaurant & Café</p>
+          <p className="text-gray-400">The Authentic taste of Indian</p>
           <div className="mt-8 text-sm text-gray-400">
-            © 2024 North Park. All rights reserved.
+            © 2025 North Park, Indian Restaurant & Café. All rights reserved.
           </div>
         </div>
       </footer>
