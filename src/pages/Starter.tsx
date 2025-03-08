@@ -19,7 +19,7 @@ const startersAndGrills: MenuItem[] = [
   {
     name: { en: "Chicken Tikka", jp: "チキンティッカ" },
     description: { en: "Spicy Chicken Barbeque (4 pc)", jp: "スパイシーチキンバーベキュー" },
-    price: "¥500",
+    price: "¥600",
     category: { en: "Grills", jp: "グリル" },
     image: "/Website_Food Pictures/Starters & Grills/Chicken Tikka .jpg",
     size: "large",
@@ -120,7 +120,7 @@ const snacksAndSalads: MenuItem[] = [
     },
     price: "¥600",
     category: { en: "Snacks", jp: "スナック" },
-    image: "https://imgs.search.brave.com/cPXPxFC375nnqw_QVF6G9YBBT7F3F1LGEpY3nRHXNh8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQx/NDQ2NjI4OC9waG90/by9rdXJrdXJlLXBh/bmVlci1wYWtvcmEu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PUUzZFAwdDRrbjBJ/QXpMbnkxQVppUXJo/VnFuc1FaVWNFbm1E/Y2Z2ekYxcUU9",
+    image: "/Website_Food Pictures/Snacks and Salad/Paneer Pakora-2.JPG",
     size: "small",
     mobsize: "small"
   },
@@ -134,7 +134,7 @@ const snacksAndSalads: MenuItem[] = [
     category: { en: "Snacks", jp: "スナック" },
     image: "/Website_Food Pictures/Snacks and Salad/Onion Bhaji.jpg",
     size: "small",
-    mobsize: "large"
+    mobsize: "small"
   },
   {
     name: { en: "Green Salad", jp: "グリーンサラダ" },
@@ -144,10 +144,23 @@ const snacksAndSalads: MenuItem[] = [
     },
     price: "¥500",
     category: { en: "Salads", jp: "サラダ" },
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2000&auto=format&fit=crop",
+    image: "/Website_Food Pictures/Snacks and Salad/Green Salad.jpg",
     size: "medium",
     mobsize: "medium"
   },
+  {
+    name: { en: "Potato Fry", jp: "ポテトフライ" },
+    description: {
+      en: "Deep fried potato",
+      jp: "揚げたジャガイモ"
+    },
+    price: "¥400",
+    category: { en: "Snacks", jp: "スナック" },
+    image: "/Website_Food Pictures/Snacks and Salad/Potato Fry.jpg",
+    size: "large",
+    mobsize: "large"
+},
+
   {
     name: { en: "Indian Salad", jp: "インディアンサラダ" },
     description: {
@@ -293,7 +306,7 @@ function MenuSection({ title, items, language, Icon }: {
         <div className="banner-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1606471191009-63994c53433b?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
         <div className="banner-content relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
-          <h2 className="text-4xl font-bold flex items-center gap-3">
+          <h2 className="text-6xl font-bold flex items-center gap-3">
             <Icon className="w-8 h-8 text-orange-500" />
             {title[language]}
           </h2>
