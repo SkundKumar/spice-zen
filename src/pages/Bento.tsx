@@ -322,16 +322,16 @@ function Bento() {
       </main>
 
       {/* Footer */}
-      <motion.footer 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.8 }}
-        className="bg-orange-900/90 text-white py-6 sm:py-8"
-      >
-        <div className="container mx-auto px-4 sm:px-6 text-center">
-          <p className="text-base sm:text-lg">© 2025 North Park Indian Restaurant & Cafe. All rights reserved.</p>
+      <footer className="border-t border-dashed border-black py-12 mt-12">
+        <div className="container mx-auto px-6">
+          <p className="text-center text-black text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+            {language === 'en' 
+              ? "Prices are subject to change without prior notice. Images are for illustration purposes only, and actual dishes may vary in presentation and ingredients."
+              : "価格は予告なく変更される場合があります。画像はイメージです。実際の料理は見た目や材料が異なる場合があります。"
+            }
+          </p>
         </div>
-      </motion.footer>
+      </footer>
     </div>
   );
 }

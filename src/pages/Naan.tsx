@@ -243,7 +243,18 @@ ${item.mobsize === 'large' ? 'sm:col-span-2 sm:row-span-2 md:col-span-1 md:row-s
       </div>
     ))}
   </div>
+  
 </main>
+<footer className="border-t border-dashed border-black py-12 mt-12">
+        <div className="container mx-auto px-6">
+          <p className="text-center text-black text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+            {language === 'en' 
+              ? "Prices are subject to change without prior notice. Images are for illustration purposes only, and actual dishes may vary in presentation and ingredients."
+              : "価格は予告なく変更される場合があります。画像はイメージです。実際の料理は見た目や材料が異なる場合があります。"
+            }
+          </p>
+        </div>
+      </footer>
 
       </div>
     );
