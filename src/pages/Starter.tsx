@@ -383,8 +383,8 @@ function App() {
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <UtensilsCrossed className="w-8 h-8 text-orange-600" />
-            <h1 className="text-3xl font-serif text-gray-900">
-              <a href='/menu'>North Park</a>
+            <h1 className="text-4xl font-serif text-gray-900">
+              <a href='/menu'>North Park, Indian Restaurant & Café</a>
             </h1>
           </div>
           <button
