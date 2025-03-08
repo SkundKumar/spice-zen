@@ -240,7 +240,7 @@ const menuItems = {
       "description": { "en": "Potato, Green Peas, Green Beans, Mushrooms, Carrot, Cauliflower Curry", "jp": "ジャガイモ、グリーンピース、インゲン、マッシュルーム、ニンジン、カリフラワーカレー" },
       "category": { "en": "Vegetable", "jp": "野菜" },
       "price": "¥1180",
-      "image": "/Website_Food Pictures/Vegetable Delicacies/"
+      "image": "/Website_Food Pictures/Vegetable Delicacies/Veg Curry.jpg"
     },
     {
       "name": { "en": "Aloo Bhindi", "jp": "アルービンディ" },
@@ -330,7 +330,7 @@ function Dinner() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <h1 className="text-4xl font-serif text-gray-900"><a href='/menu'>North Park</a></h1>
+            <h1 className="text-4xl font-serif text-gray-900"><a href='/menu'>North Park, Indian Restaurant & Café</a></h1>
           </div>
           <button
             onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}
