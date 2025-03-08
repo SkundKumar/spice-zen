@@ -121,7 +121,7 @@ const Home = () => {
             </div>
             
             <div className="hidden md:flex space-x-8  mr-36">
-              {['home', 'about', 'contact',"Galary"].map((section) => (
+              {['home', 'about', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -135,7 +135,11 @@ const Home = () => {
                   )}
                 </button>
               ))}
+              <a className={`relative transition-colors duration-300 ${
+                    isScrolled ? 'text-gray-800' : 'text-white'
+                  }  hover:text-orange-600`}href="/galary">Galary</a>
             </div>
+            
             <button
               onClick={toggleLanguage}
               className={`px-4 py-2 ${isScrolled ? 'bg-orange-500' : 'bg-white'} ${
