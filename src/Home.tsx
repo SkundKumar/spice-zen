@@ -11,7 +11,8 @@ const Home = () => {
 
   const translations = {
     en: {
-      title: "North Park, Indian Restaurant & Café",
+      title: "North Park,",
+      title2: "Indian Restaurant & Café",
       subtitle: "The Authentic taste of India",
       exploreMenu: "Explore Menu",
       visitUs: "Visit Us",
@@ -23,6 +24,7 @@ const Home = () => {
     },
     jp: {
       title: "スパイス＆禅",
+      title2:"",
       subtitle: "インドの本場の味",
       exploreMenu: "メニューを見る",
       visitUs: "お店に行く",
@@ -109,11 +111,17 @@ const Home = () => {
       >
         <div className="container mx-auto px-1 py-6">
           <div className="flex items-center  justify-between">
-            <div className={`text-md md:text-2xl font-bold ${isScrolled ? 'text-black' : 'text-white'}`}>
+            <div>
+            <div className={`mt-2 text-md md:text-2xl font-bold ${isScrolled ? 'text-black' : 'text-white'}`}>
               {translations[language].title}
             </div>
+            <div className={`text-md md:text-2xl font-bold ${isScrolled ? 'text-black' : 'text-white'}`}>
+              {translations[language].title2}
+            </div>
+            </div>
+            
             <div className="hidden md:flex space-x-8  mr-36">
-              {['home', 'about', 'contact'].map((section) => (
+              {['home', 'about', 'contact',"Galary"].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -156,6 +164,9 @@ const Home = () => {
               <Sparkles className="absolute -top-8 -left-8 w-6 h-6 text-orange-400 floating" />
               <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
                 {translations[language].title}
+              </h1>
+              <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
+                {translations[language].title2}
               </h1>
               <Sparkles className="absolute -bottom-8 -right-8 w-6 h-6 text-orange-400 floating" />
             </div>
