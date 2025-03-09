@@ -28,7 +28,7 @@ function App() {
         <Route path="/category/beverage" element={<Drinks />} />
         <Route path="/category/starters" element={<Starters />} />
         <Route path="/category/bento" element={<Bento />} />
-        <Route path="/galary" element={<Galary />} />
+        <Route path="/gallery" element={<Galary />} />
       </Routes>
     </Router>
   );
