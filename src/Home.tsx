@@ -435,7 +435,7 @@ const Home = () => {
               <p className="text-gray-600 mb-8">{translations[language].reservationText}</p>
               <div className="space-y-4">
                 <a 
-                  href="#"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeC4mHXyAx9o8_qDb3NJqEdak3LMcRwEM1mDyePUbACkrU1ow/viewform?usp=sharing"
                   className="w-full inline-flex items-center justify-center bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 group"
                 >
                   <Utensils className="mr-2 group-hover:rotate-12 transition-transform duration-300" />
