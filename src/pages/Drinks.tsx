@@ -72,14 +72,19 @@ const drinkCategories = [
     ]
   },
   {
-    title: { en: "Ice Cream", jp: "アイスクリーム" },
-    icon: IceCream,
-    image: "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?q=80&w=1770&auto=format&fit=crop",
-    items: [
-      { name: { en: "Mango Ice Cream", jp: "マンゴーアイス" },  price: "¥--" },
-      { name: { en: "Vanilla Ice Cream", jp: "バニラアイス" },  price: "¥--" }
+    "title": { "en": "Sweets & Ice Creams", "jp": "スイーツ・アイスクリーム" },
+    "icon": "IceCream",
+    "image": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?q=80&w=1770&auto=format&fit=crop",
+    "items": [
+        { "name": { "en": "Gulab Jamun (2p)", "jp": "グラブ・ジャムン" }, "price": "¥500" },
+        { "name": { "en": "Mango Ice Cream", "jp": "マンゴーバニラアイスクリーム" }, "price": "¥400" },
+        { "name": { "en": "Vanilla Ice Cream", "jp": "バニラアイスクリーム" }, "price": "¥300" },
+        { "name": { "en": "Choco Vanilla Ice Cream", "jp": "チョコバニラアイスクリーム" }, "price": "¥350" },
+        { "name": { "en": "Strawberry Ice Cream", "jp": "ストロベリーアイスクリーム" }, "price": "¥300" }
     ]
-  }
+}
+
+
 ];
 
 function Drinks() {
