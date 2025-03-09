@@ -14,7 +14,11 @@ const menuImages = [
   {
     url: "/Website_Food Pictures/Lunch Menu photo/Lunch Menu_Single Page_2.jpg",
     title: { en: "Lunch Menu Page 2", jp: "ランチメニュー ページ2" }
-  }
+  },
+  {
+    url: "/Website_Food Pictures/Special Meal Sets/Children Menu_Aug 2024.jpg",
+    title: { en: "Lunch Menu Page 3", jp: "ランチメニュー ページ2" }
+  },
 ];
 
 function Lunch() {
@@ -65,7 +69,7 @@ function Lunch() {
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Sun className="w-10 h-10 text-amber-600" />
-            <h1 className="text-5xl font-serif text-gray-900"><a href='/menu'>North Park</a></h1>
+            <h1 className="text-5xl font-serif text-gray-900"><a href='/menu'>North Park, Indian Restaurant & Café</a></h1>
           </div>
           <button
             onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}

@@ -96,13 +96,14 @@ function Bento() {
       >
         <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <motion.h1 
+            <a href="/menu">
+            <h1 
               className="text-3xl sm:text-4xl font-serif text-gray-900"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              
             >
-              North Park
-            </motion.h1>
+              North Park, Indian Restaurant & Café
+            </h1>
+            </a>
           </div>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -186,7 +187,7 @@ function Bento() {
                 <p className="text-sm sm:text-base text-orange-700 font-medium mb-1 sm:mb-2">{language === 'en' ? "Address" : "住所"}</p>
                 <p className="text-lg sm:text-xl text-gray-700">
                   {language === 'en' 
-                    ? "300-0052 Ibaraki-ken Tsuchiura-shi Higashi-Manabe-cho 1-7" 
+                    ? "1-7 Higashimanabemachi, Tsuchiura, Ibaraki 300-0052" 
                     : "300-0052 茨城県土浦市東真鍋町1-7"}
                 </p>
               </div>

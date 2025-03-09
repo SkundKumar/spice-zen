@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Wine, Beer, Coffee, Milk } from 'lucide-react';
+import { Wine, Beer, Coffee, Milk, IceCream } from 'lucide-react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -70,6 +70,15 @@ const drinkCategories = [
       { name: { en: "Mango Juice", jp: "マンゴージュース" }, price: "¥350" },
       { name: { en: "Mango Lassi", jp: "マンゴーラッシー" }, price: "¥400" }
     ]
+  },
+  {
+    title: { en: "Ice Cream", jp: "アイスクリーム" },
+    icon: IceCream,
+    image: "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?q=80&w=1770&auto=format&fit=crop",
+    items: [
+      { name: { en: "Mango Ice Cream", jp: "マンゴーアイス" },  price: "¥--" },
+      { name: { en: "Vanilla Ice Cream", jp: "バニラアイス" },  price: "¥--" }
+    ]
   }
 ];
 
@@ -117,7 +126,7 @@ function Drinks() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-          <h1 className="text-3xl font-serif text-gray-900"><a href='/menu'>North Park</a></h1>
+          <h1 className="text-3xl font-serif text-gray-900"><a href='/menu'>North Park, Indian Restaurant & Café</a></h1>
           </div>
           <button
             onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}
@@ -231,16 +240,16 @@ function Drinks() {
           </div>
         ))}
 
-<footer className="border-t border-dashed border-black py-12 mt-12">
-        <div className="container mx-auto px-6">
-          <p className="text-center text-black text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            {language === 'en' 
-              ? "Prices are subject to change without prior notice. Images are for illustration purposes only, and actual dishes may vary in presentation and ingredients."
-              : "価格は予告なく変更される場合があります。画像はイメージです。実際の料理は見た目や材料が異なる場合があります。"
-            }
-          </p>
-        </div>
-      </footer>
+        <footer className="border-t border-dashed border-black py-12 mt-12">
+          <div className="container mx-auto px-6">
+            <p className="text-center text-black text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+              {language === 'en' 
+                ? "Prices are subject to change without prior notice. Images are for illustration purposes only, and actual dishes may vary in presentation and ingredients."
+                : "価格は予告なく変更される場合があります。画像はイメージです。実際の料理は見た目や材料が異なる場合があります。"
+              }
+            </p>
+          </div>
+        </footer>
       </main>
     </div>
   );

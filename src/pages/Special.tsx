@@ -29,9 +29,12 @@ const menuItems: MenuItem[] = [
         price: "",
         variations: [
           { name: { en: "Dal", jp: "豆カレー" }, price: "" },
+          { name: { en: "Samosa", jp: "サモサ " }, price: "" },
           { name: { en: "Paneer Butter Masala", jp: "パニールバターマサラ" }, price: "" },
           { name: { en: "Palak Mushroom", jp: "パラックキノコ" }, price: "" },
-          { name: { en: "Vegetable Curry", jp: "ベジタブルカレー" }, price: "" }
+          { name: { en: "Vegetable Curry", jp: "ベジタブルカレー" }, price: "" },
+          { name: { en: "Salad, Papad, Nan, Rice, & Soft Drink ", jp: "サモサ サラダ パパド ナン ライス ソフトドリンク" }, price: "" },
+          
         ]
     },
     {
@@ -48,7 +51,8 @@ const menuItems: MenuItem[] = [
           { name: { en: "Mutton Curry", jp: "マトンカレー" }, price: "" },
           { name: { en: "Chicken Curry", jp: "チキンカレー" }, price: "" },
           { name: { en: "Keema Curry", jp: "キーマカレー" }, price: "" },
-          { name: { en: "Vegetable Curry", jp: "ベジタブルカレー" }, price: "" }
+          { name: { en: "Vegetable Curry", jp: "ベジタブルカレー" }, price: "" },
+          { name: { en: "Salad, Papad, Nan, Rice, & Soft Drink ", jp: "サモサ サラダ パパド ナン ライス ソフトドリンク" }, price: "" },
         ]
     },
     {
@@ -63,7 +67,8 @@ const menuItems: MenuItem[] = [
           { name: { en: "Fish Tikka", jp: "フィッシュティッカ" }, price: "" },
           { name: { en: "Tandoori Prawn", jp: "タンドリープラウン" }, price: "" },
           { name: { en: "Seafood Curry", jp: "シーフードカレー" }, price: "" },
-          { name: { en: "Prawn Curry", jp: "プラウンカレー" }, price: "" }
+          { name: { en: "Prawn Curry", jp: "プラウンカレー" }, price: "" },
+          { name: { en: "Salad, Papad, Nan, Rice, & Soft Drink ", jp: "サモサ サラダ パパド ナン ライス ソフトドリンク" }, price: "" },
         ]
     },
     {
@@ -130,7 +135,7 @@ function Special() {
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                        <h1 className="text-3xl font-serif text-gray-900"><a href='/menu'>North Park</a></h1>
+                        <h1 className="text-3xl font-serif text-gray-900"><a href='/menu'>North Park, Indian Restaurant & Café</a></h1>
                     </div>
                     <button
                         onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}
@@ -152,7 +157,7 @@ function Special() {
                             initial={{ opacity: 0, y: -20 }} 
                             animate={{ opacity: 1, y: 0 }} 
                             transition={{ duration: 1 }}
-                            className="text-4xl font-bold"
+                            className="text-6xl font-bold"
                         >
                             {language === 'en' ? "Special Meal Sets" : "スペシャルミールセット"}
                         </motion.h1>
@@ -207,8 +212,11 @@ function Special() {
                                                 {variation.price && (
                                                     <span className="font-medium text-orange-600">{variation.price}</span>
                                                 )}
+                                                
                                             </div>
+                                            
                                         ))}
+                                        <p className='font-mono mt-10 border-dashed border-t border-black'>Choose any two dishes from the four dishes & any soft drink</p>
                                     </div>
                                 </div>
                             )}
@@ -217,9 +225,13 @@ function Special() {
                 </div>
 
                 <div className="space-y-8 mt-12">
-                    <img className='rounded-xl shadow-lg' src="/Website_Food Pictures/Special Meal Sets/Children Menu_Aug 2024.jpg" alt="Children Menu" />
+                    
                     <img className='rounded-xl shadow-lg' src="/Website_Food Pictures/Special Meal Sets/Family Set_Dinner Course-1.png" alt="Family Set Dinner Course" />
                     <img className='rounded-xl shadow-lg' src="/Website_Food Pictures/Special Meal Sets/Party Course .png" alt="Party Course" />
+                    <h2 className='text-4xl font-bold '>Couple Set</h2>
+                    <img className='rounded-xl shadow-lg' src="/public/Website_Food Pictures/Special Meal Sets/Couple set-Veg-v2.jpg" alt="Party Course" />
+                    <h2 className='text-4xl font-bold '>Drink Set</h2>
+                    <img className='rounded-xl shadow-lg' src="/public/Website_Food Pictures/Special Meal Sets/Drink Set_Dinner course.png" alt="Party Course" />
                 </div>
             </main>
             <footer className="border-t border-dashed border-black py-12 mt-12">

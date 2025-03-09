@@ -85,8 +85,8 @@ function Accordion({ title, items, language }: AccordionProps) {
         <div className="px-6 pb-6">
           <p className="text-sm text-gray-600">
             {language === 'en' 
-              ? 'Nan or rice, soup & papad is included with curry. Please select your spice level (Mild, Medium, Hot, Extra Hot).'
-              : 'カレーにはナンまたはライス、スープ、パパドが付きます。辛さレベルを選択してください (弱辛、中辛、辛口、極辛)'}
+              ? 'Nan or rice & papad is included with curry. Please select your spice level (Mild, Medium, Hot, Extra Hot).'
+              : 'カレーにはナンまたはライス、パパドが付きます。辛さレベルを選択してください (弱辛、中辛、辛口、極辛)。'}
           </p>
         </div>
       </div>
@@ -167,7 +167,14 @@ const menuItems = {
         category: { en: "Mutton", jp: "マトン" },
         price: "¥1280",
         image: ""
-      } 
+      },
+      {
+        "name": { "en": "Bhindi Gosht", "jp": "ビンディー・ゴシュト" },
+        "description": { "en": "Mutton and Okra Curry", "jp": "マトンとオクラのカレー" },
+        "category": { "en": "Mutton", "jp": "マトン" },
+        "price": "¥1280",
+        "image": "/Website_Food Pictures/Mutton Curry/"
+      }
   ],
   chicken: [
     {
