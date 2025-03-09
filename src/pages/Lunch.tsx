@@ -71,6 +71,7 @@ function Lunch() {
             <Sun className="w-10 h-10 text-amber-600" />
             <h1 className="text-5xl font-serif text-gray-900"><a href='/menu'>North Park, Indian Restaurant & Café</a></h1>
           </div>
+          <a className="font-mono text-lg " href="/">Home</a>
           <button
             onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}
             className="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-200/50 backdrop-blur-lg hover:bg-amber-300/50 transition-all duration-300 shadow-md hover:shadow-lg"

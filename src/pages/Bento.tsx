@@ -87,6 +87,7 @@ function Bento() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-200 via-orange-100 to-orange-50">
+
       {/* Header */}
       <motion.header 
         initial={{ y: -100, opacity: 0 }}
@@ -104,7 +105,11 @@ function Bento() {
               North Park, Indian Restaurant & Café
             </h1>
             </a>
+            
+      
+      
           </div>
+          <a className="font-mono text-lg" href="/">Home</a>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

@@ -109,6 +109,7 @@ function Biryani() {
                     <div className="flex items-center gap-3">
                         <h1 className="text-3xl font-serif text-gray-900"><a href='/menu'>North Park, Indian Restaurant & Café</a></h1>
                     </div>
+                    <a className="font-mono text-lg " href="/">Home</a>
                     <button
                         onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}
                         className="flex items-center gap-2 px-4 py-2 rounded-full bg-orange-200/50 backdrop-blur-lg hover:bg-orange-300/50 transition-all duration-300 shadow-md hover:shadow-lg"

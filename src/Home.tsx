@@ -26,8 +26,8 @@ const Home = () => {
       para: "At our Indian restaurant, we offer a warm and vibrant atmosphere that reflects the rich culture and traditions of India. Our spacious dining area can comfortably host both intimate dinners and large gatherings, making it an ideal spot for any occasion. We also provide ample free parking, ensuring that your visit is convenient from start to finish. Inside, you'll find a beautifully decorated interior, adorned with traditional Indian motifs and colors, creating an inviting ambiance that enhances the authentic dining experience we offer."
     },
     jp: {
-      title: "スパイス＆禅",
-      title2:"",
+      title: "ノースパーク、イン",
+      title2:"ド料理レストラン＆カフェ",
       subtitle: "インドの本場の味",
       exploreMenu: "メニューを見る",
       visitUs: "お店に行く",

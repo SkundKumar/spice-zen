@@ -20,11 +20,11 @@ const drinkCategories = [
     image: "/Website_Food Pictures/Drinks/Alcohol Drink 2.jpg",
     items: [
       { name: { en: "Nama Beer", jp: "生ビール" }, price: "¥500" },
-      { name: { en: "Bottle Beer Asahi", jp: "瓶ビールアサヒ" }, price: "¥500" },
-      { name: { en: "Indian Beer", jp: "インドビール" }, description: { en: "(Made in India)", jp: "インド産" }, price: "¥550" },
-      { name: { en: "Non Alcohol Beer", jp: "0.0% ビール" }, price: "¥450" },
-      { name: { en: "Imported Beer", jp: "輸入ビール" }, description: { en: "(Foreign)", jp: "外国産" }, price: "¥550" },
-      { name: { en: "Corona Beer", jp: "コロナビール" }, price: "¥500" }
+      { name: { en: "Bottle Beer Asahi", jp: "瓶ビールアサヒ" }, price: "¥550" },
+      { name: { en: "Indian Beer", jp: "インドビール" }, description: { en: "(Made in India)", jp: "インド産" }, price: "¥600" },
+      { name: { en: "Non Alcohol Beer", jp: "0.0% ビール" }, price: "¥500" },
+      { name: { en: "Imported Beer", jp: "輸入ビール" }, description: { en: "(Foreign)", jp: "外国産" }, price: "¥600" },
+      { name: { en: "Corona Beer", jp: "コロナビール" }, price: "¥550" }
     ]
   },
   {
@@ -52,12 +52,12 @@ const drinkCategories = [
     icon: Coffee,
     image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop",
     items: [
-      { name: { en: "Oolong Tea", jp: "ウーロン茶" }, price: "¥250" },
-      { name: { en: "Ice Tea", jp: "アイスチャイ" }, price: "¥300" },
-      { name: { en: "Masala Tea", jp: "マサラチャイ" }, description: { en: "(Hot)", jp: "" }, price: "¥300" },
+      { name: { en: "Oolong Tea", jp: "ウーロン茶" }, price: "300" },
+      { name: { en: "Ice Tea", jp: "アイスチャイ" }, price: "¥350" },
+      { name: { en: "Masala Tea", jp: "マサラチャイ" }, description: { en: "(Hot)", jp: "" }, price: "¥400" },
       { name: { en: "Ice Coffee", jp: "アイスコーヒー" }, price: "¥300" },
       { name: { en: "Hot Coffee", jp: "ホットコーヒー" }, price: "¥300" },
-      { name: { en: "Cola", jp: "コーラ" }, price: "¥250" },
+      { name: { en: "Cola", jp: "コーラ" }, price: "¥300" },
       { name: { en: "Orange Juice", jp: "オレンジジュース" }, price: "¥250" },
       { name: { en: "Coconut Water", jp: "ココナッツウォーター" }, price: "¥400" }
     ]
@@ -66,8 +66,8 @@ const drinkCategories = [
     title: { en: "Lassi", jp: "ラッシー" },
     icon: Milk,
     items: [
-      { name: { en: "Lassi", jp: "ラッシー" }, price: "¥300" },
-      { name: { en: "Mango Juice", jp: "マンゴージュース" }, price: "¥350" },
+      { name: { en: "Lassi", jp: "ラッシー" }, price: "¥350" },
+      { name: { en: "Mango Juice", jp: "マンゴージュース" }, price: "¥400" },
       { name: { en: "Mango Lassi", jp: "マンゴーラッシー" }, price: "¥400" }
     ]
   },
@@ -128,6 +128,7 @@ function Drinks() {
           <div className="flex items-center gap-3">
           <h1 className="text-3xl font-serif text-gray-900"><a href='/menu'>North Park, Indian Restaurant & Café</a></h1>
           </div>
+          <a className="font-mono text-lg " href="/">Home</a>
           <button
             onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}
             className="flex items-center gap-2 px-4 py-2 rounded-full bg-purple-200/50 hover:bg-purple-300/50 transition-all duration-300 shadow-md hover:shadow-lg"

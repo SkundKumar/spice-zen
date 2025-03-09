@@ -16,6 +16,7 @@ interface MenuItem {
     mobsize?: 'small' | 'medium' | 'large';
     price: string;
     variations?: { name: { en: string; jp: string }; price: string }[];
+    footNote: { en: string; jp: string };
 }
 
 const menuItems: MenuItem[] = [
@@ -34,8 +35,10 @@ const menuItems: MenuItem[] = [
           { name: { en: "Palak Mushroom", jp: "パラックキノコ" }, price: "" },
           { name: { en: "Vegetable Curry", jp: "ベジタブルカレー" }, price: "" },
           { name: { en: "Salad, Papad, Nan, Rice, & Soft Drink ", jp: "サモサ サラダ パパド ナン ライス ソフトドリンク" }, price: "" },
+
           
-        ]
+        ],
+        footNote: { en: "Choose any two dishes from the four dishes & any soft drink", jp: "4つの料理の中から2つの料理と、お好きなソフトドリンクをお選びください。" }
     },
     {
         name: { en: "Non-Veg Thali", jp: "ノンベジタリー" },
@@ -53,7 +56,8 @@ const menuItems: MenuItem[] = [
           { name: { en: "Keema Curry", jp: "キーマカレー" }, price: "" },
           { name: { en: "Vegetable Curry", jp: "ベジタブルカレー" }, price: "" },
           { name: { en: "Salad, Papad, Nan, Rice, & Soft Drink ", jp: "サモサ サラダ パパド ナン ライス ソフトドリンク" }, price: "" },
-        ]
+        ],
+        footNote: { en: "Choose any two dishes from the four dishes & any soft drink", jp: "4つの料理の中から2つの料理と、お好きなソフトドリンクをお選びください。" }
     },
     {
         name: { en: "Seafood Thali", jp: "シーフードターリー" },
@@ -69,7 +73,9 @@ const menuItems: MenuItem[] = [
           { name: { en: "Seafood Curry", jp: "シーフードカレー" }, price: "" },
           { name: { en: "Prawn Curry", jp: "プラウンカレー" }, price: "" },
           { name: { en: "Salad, Papad, Nan, Rice, & Soft Drink ", jp: "サモサ サラダ パパド ナン ライス ソフトドリンク" }, price: "" },
-        ]
+        ],
+        footNote: { en: "Choose any soft drink", jp: "お好きなソフトドリンクをお選びください。" }
+
     },
     {
         name: { en: "Garlic Kebab Masala Rice", jp: "ガーリックケバブマサラライス" },
@@ -84,7 +90,8 @@ const menuItems: MenuItem[] = [
           { name: { en: "Garlic Naan", jp: "ガーリックナン" }, price: "" },
           { name: { en: "Basmati Rice", jp: "バスマティライス（インド米）" }, price: "" },
           { name: { en: "Softdrink", jp: "ソフトドリンク" }, price: "" }
-        ]
+        ],
+        footNote: {en:"",jp:""}
     }
 ];
 
@@ -137,6 +144,7 @@ function Special() {
                     <div className="flex items-center gap-3">
                         <h1 className="text-3xl font-serif text-gray-900"><a href='/menu'>North Park, Indian Restaurant & Café</a></h1>
                     </div>
+                    <a className="font-mono text-lg " href="/">Home</a>
                     <button
                         onClick={() => setLanguage(prev => prev === 'en' ? 'jp' : 'en')}
                         className="flex items-center gap-2 px-4 py-2 rounded-full bg-orange-200/50 backdrop-blur-lg hover:bg-orange-300/50 transition-all duration-300 shadow-md hover:shadow-lg"
@@ -216,7 +224,7 @@ function Special() {
                                             </div>
                                             
                                         ))}
-                                        <p className='font-mono mt-10 border-dashed border-t border-black'>Choose any two dishes from the four dishes & any soft drink</p>
+                                        <p className='font-mono mt-10 border-dashed border-t border-black'>{item.footNote[language]}</p>
                                     </div>
                                 </div>
                             )}
@@ -229,9 +237,9 @@ function Special() {
                     <img className='rounded-xl shadow-lg' src="/Website_Food Pictures/Special Meal Sets/Family Set_Dinner Course-1.png" alt="Family Set Dinner Course" />
                     <img className='rounded-xl shadow-lg' src="/Website_Food Pictures/Special Meal Sets/Party Course .png" alt="Party Course" />
                     <h2 className='text-4xl font-bold '>Couple Set</h2>
-                    <img className='rounded-xl shadow-lg' src="/public/Website_Food Pictures/Special Meal Sets/Couple set-Veg-v2.jpg" alt="Party Course" />
+                    <img className='rounded-xl shadow-lg' src="/Website_Food Pictures/Special Meal Sets/Couple set-Veg-v2.jpg" alt="Party Course" />
                     <h2 className='text-4xl font-bold '>Drink Set</h2>
-                    <img className='rounded-xl shadow-lg' src="/public/Website_Food Pictures/Special Meal Sets/Drink Set_Dinner course.png" alt="Party Course" />
+                    <img className='rounded-xl shadow-lg' src="/Website_Food Pictures/Special Meal Sets/Drink Set_Dinner course.png" alt="Party Course" />
                 </div>
             </main>
             <footer className="border-t border-dashed border-black py-12 mt-12">
