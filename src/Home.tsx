@@ -442,7 +442,7 @@ const Home = () => {
                   {translations[language].bookTable}
                 </a>
                 <a 
-                  href="#"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeL3z_YVeW7pK59sjeUlggLANci2-wTJGhLUrRVZ_CONXk4lA/viewform?usp=sharing"
                   className="w-full inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 group"
                 >
                   <MessageSquare className="mr-2 group-hover:rotate-12 transition-transform duration-300" />
