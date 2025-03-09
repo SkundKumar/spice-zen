@@ -2,8 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Menu from './Menu';
-import CategoryPage from './CatagoryPage';
-import MainCourse from './pages/MainCourse';
+
 import Biryani from './pages/Biryani';
 import Special from './pages/Special';
 import Dinner from './pages/Dinner';

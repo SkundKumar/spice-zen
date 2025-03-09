@@ -169,7 +169,7 @@ const snacksAndSalads: MenuItem[] = [
     },
     price: "¥600",
     category: { en: "Salads", jp: "サラダ" },
-    image: "https://images.unsplash.com/photo-1547496502-affa22d38842?q=80&w=2000&auto=format&fit=crop",
+    image: "/Website_Food Pictures/Snacks and Salad/Indian Salad.jpg",
     size: "small",
     mobsize: "small"
   },
