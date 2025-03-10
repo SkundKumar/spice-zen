@@ -480,6 +480,7 @@ const Home = () => {
           <div className="mt-8 text-sm text-gray-400">
             {translations[language].copyright}
           </div>
+          Japanese content translated from English using advanced AI technology. In case of discrepancy, English text prevails.
         </div>
       </footer>
     </div>

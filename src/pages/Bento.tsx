@@ -335,7 +335,9 @@ function Bento() {
               ? "Prices are subject to change without prior notice. Images are for illustration purposes only, and actual dishes may vary in presentation and ingredients."
               : "価格は予告なく変更される場合があります。画像はイメージです。実際の料理は見た目や材料が異なる場合があります。"
             }
+            <h1 className='text-red-500 mt-5'>Japanese content translated from English using advanced AI technology. In case of discrepancy, English text prevails.</h1>
           </p>
+          
         </div>
       </footer>
     </div>

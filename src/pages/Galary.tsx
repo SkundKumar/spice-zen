@@ -157,8 +157,9 @@ function Galary() {
           <p className="text-center text-black text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
            
               "Prices are subject to change without prior notice. Images are for illustration purposes only, and actual dishes may vary in presentation and ingredients."
-              
+              <h1 className='text-red-500 mt-5'>Japanese content translated from English using advanced AI technology. In case of discrepancy, English text prevails.</h1>
           </p>
+          
         </div>
       </footer>
     </div>
