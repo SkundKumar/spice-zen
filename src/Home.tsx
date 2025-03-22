@@ -1,15 +1,30 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { MapPin, Clock, Phone, Mail, ChevronDown, Utensils, MessageSquare, Sparkles, Heart, Star, Award, Users, Truck} from 'lucide-react';
-import { CiFacebook } from "react-icons/ci";
-import { FaInstagram } from "react-icons/fa";
+"use client"
+
+import { useEffect, useState, useRef } from "react"
+import {
+  MapPin,
+  Clock,
+  Phone,
+  ChevronDown,
+  Utensils,
+  MessageSquare,
+  Sparkles,
+  Heart,
+  Star,
+  Award,
+  Users,
+  Truck,
+} from "lucide-react"
+import { CiFacebook } from "react-icons/ci"
+import { FaInstagram } from "react-icons/fa"
 
 const Home = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
-  const [language, setLanguage] = useState<'en' | 'jp'>('en');
-  const heroRef = useRef<HTMLElement>(null);
-  const aboutRef = useRef<HTMLElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState("home")
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true)
+  const [language, setLanguage] = useState("en")
+  const heroRef = useRef(null)
+  const aboutRef = useRef(null)
 
   const translations = {
     en: {
@@ -36,11 +51,14 @@ const Home = () => {
       fusionCultures: "A Fusion of Cultures",
       exploreGallery: "Explore Gallery",
       ourPassion: "Our Passion",
-      passionText: "We pour our heart into every dish, ensuring each plate reflects our dedication to authentic flavors and innovative presentation.",
+      passionText:
+        "We pour our heart into every dish, ensuring each plate reflects our dedication to authentic flavors and innovative presentation.",
       qualityFirst: "Quality First",
-      qualityText: "We source only the finest ingredients, combining premium Indian spices with local Japanese produce to create exceptional dishes.",
+      qualityText:
+        "We source only the finest ingredients, combining premium Indian spices with local Japanese produce to create exceptional dishes.",
       ourTeam: "Our Team",
-      teamText: "Our diverse team brings together expertise from both Indian and Japanese culinary traditions, creating a unique dining experience.",
+      teamText:
+        "Our diverse team brings together expertise from both Indian and Japanese culinary traditions, creating a unique dining experience.",
       pressCoverage: "Press Coverage & Reviews",
       hours: "Hours",
       hoursText: "Monday - Sunday: '11:00 - 15:00' & '17:00 - 22:30'",
@@ -49,7 +67,18 @@ const Home = () => {
       bookTable: "Book a Table",
       sendInquiry: "Send Inquiry",
       footerText: "The Authentic taste of Indian",
-      copyright: "© 2025 North Park, Indian Restaurant & Café. All rights reserved."
+      copyright: "© 2025 North Park, Indian Restaurant & Café. All rights reserved.",
+      membershipTitle: "Membership Program",
+      membershipText:
+        "Join our exclusive membership program! Request a Member Card from our staff during your next visit and enjoy an exclusive 5% discount every time you dine in.",
+      memberBenefits: "Member Benefits",
+      discountText: "5% discount on all dine-in orders",
+      facilitiesTitle: "Our Facilities",
+      facilitiesText:
+        "Spacious dining meets hassle-free parking! Our large dining space and free parking make group dining more convenient than ever.",
+      seatingCapacity: "Seating Capacity",
+      carParking: "Car Parking",
+      halalFood: "Halal Food",
     },
     jp: {
       title: "ノースパーク、",
@@ -88,133 +117,142 @@ const Home = () => {
       bookTable: "テーブルを予約",
       sendInquiry: "お問い合わせ",
       footerText: "インドの本場の味",
-      copyright: "© 2025 ノースパーク インド料理レストラン＆カフェ. All rights reserved."
-    }
-  };
+      copyright: "© 2025 ノースパーク インド料理レストラン＆カフェ. All rights reserved.",
+      membershipTitle: "メンバーシッププログラム",
+      membershipText:
+        "特別なメンバーシッププログラムにご参加ください！次回のご来店時にスタッフにメンバーカードをリクエストいただくと、ご来店のたびに5％の割引をお楽しみいただけます。",
+      memberBenefits: "会員特典",
+      discountText: "店内でのご注文すべてに5％割引",
+      facilitiesTitle: "施設情報",
+      facilitiesText:
+        "広々とした食事スペースと便利な駐車場！広いダイニングスペースと無料駐車場で、グループでのお食事がより便利になりました。",
+      seatingCapacity: "座席数",
+      carParking: "駐車場",
+      halalFood: "ハラールフード",
+    },
+  }
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === 'jp' ? 'en' : 'jp'));
-  };
+    setLanguage((prev) => (prev === "jp" ? "en" : "jp"))
+  }
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
-      const sections = ['home', 'about', 'contact'];
-      
+      setIsScrolled(window.scrollY > 50)
+      const scrollPosition = window.scrollY + window.innerHeight / 3
+      const sections = ["home", "about", "contact"]
+
       for (const section of sections) {
-        const element = document.getElementById(section);
+        const element = document.getElementById(section)
         if (element) {
-          const { offsetTop, offsetHeight } = element;
+          const { offsetTop, offsetHeight } = element
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
+            setActiveSection(section)
+            break
           }
         }
       }
 
       if (aboutRef.current && window.scrollY > aboutRef.current.offsetTop - window.innerHeight / 2) {
-        setShowScrollIndicator(false);
+        setShowScrollIndicator(false)
       } else {
-        setShowScrollIndicator(true);
+        setShowScrollIndicator(true)
       }
 
-      const heroSection = document.querySelector('.hero-content');
+      const heroSection = document.querySelector(".hero-content")
       if (heroSection) {
-        const offset = window.scrollY * 0.5;
-        heroSection.setAttribute('style', `--parallax-offset: ${offset}px`);
+        const offset = window.scrollY * 0.5
+        heroSection.setAttribute("style", `--parallax-offset: ${offset}px`)
       }
-    };
+    }
 
     const observerOptions = {
       root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
+      rootMargin: "0px",
+      threshold: 0.1,
+    }
 
-    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach(entry => {
+    const handleIntersect = (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          entry.target.classList.add("visible")
         }
-      });
-    };
+      })
+    }
 
-    const observer = new IntersectionObserver(handleIntersect, observerOptions);
-    document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-up').forEach(el => {
-      observer.observe(el);
-    });
+    const observer = new IntersectionObserver(handleIntersect, observerOptions)
+    document.querySelectorAll(".fade-in-up, .fade-in-left, .fade-in-right, .scale-up").forEach((el) => {
+      observer.observe(el)
+    })
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      observer.disconnect();
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+      observer.disconnect()
+    }
+  }, [])
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id)
+    element?.scrollIntoView({ behavior: "smooth" })
+  }
 
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav
-        className={`fixed w-full z-50 transition-all duration-500 ${
-          isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-        }`}
+        className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? "bg-white shadow-lg" : "bg-transparent"}`}
       >
         <div className="container mx-auto px-1 py-6">
           <div className="flex items-center justify-between">
             <div>
-              <div className={`mt-2 text-md md:text-2xl font-bold ${isScrolled ? 'text-black' : 'text-white'}`}>
+              <div className={`mt-2 text-md md:text-2xl font-bold ${isScrolled ? "text-black" : "text-white"}`}>
                 {translations[language].title}
               </div>
-              <div className={`text-md md:text-2xl font-bold ${isScrolled ? 'text-black' : 'text-white'}`}>
+              <div className={`text-md md:text-2xl font-bold ${isScrolled ? "text-black" : "text-white"}`}>
                 {translations[language].title2}
               </div>
             </div>
-            
+
             <div className="hidden md:flex space-x-8 mr-36">
               <button
-                onClick={() => scrollToSection('home')}
+                onClick={() => scrollToSection("home")}
                 className={`relative transition-colors duration-300 ${
-                  isScrolled ? 'text-gray-800' : 'text-white'
-                } ${activeSection === 'home' ? 'text-orange-600' : ''} hover:text-orange-600`}
+                  isScrolled ? "text-gray-800" : "text-white"
+                } ${activeSection === "home" ? "text-orange-600" : ""} hover:text-orange-600`}
               >
                 {translations[language].home}
               </button>
               <button
-                onClick={() => scrollToSection('about')}
+                onClick={() => scrollToSection("about")}
                 className={`relative transition-colors duration-300 ${
-                  isScrolled ? 'text-gray-800' : 'text-white'
-                } ${activeSection === 'about' ? 'text-orange-600' : ''} hover:text-orange-600`}
+                  isScrolled ? "text-gray-800" : "text-white"
+                } ${activeSection === "about" ? "text-orange-600" : ""} hover:text-orange-600`}
               >
                 {translations[language].about}
               </button>
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection("contact")}
                 className={`relative transition-colors duration-300 ${
-                  isScrolled ? 'text-gray-800' : 'text-white'
-                } ${activeSection === 'contact' ? 'text-orange-600' : ''} hover:text-orange-600`}
+                  isScrolled ? "text-gray-800" : "text-white"
+                } ${activeSection === "contact" ? "text-orange-600" : ""} hover:text-orange-600`}
               >
                 {translations[language].contact}
               </button>
-              <a 
+              <a
                 className={`relative transition-colors duration-300 ${
-                  isScrolled ? 'text-gray-800' : 'text-white'
+                  isScrolled ? "text-gray-800" : "text-white"
                 } hover:text-orange-600`}
                 href="/gallery"
               >
                 {translations[language].gallery}
               </a>
             </div>
-            
+
             <button
               onClick={toggleLanguage}
-              className={`px-4 py-2 ${isScrolled ? 'bg-orange-500' : 'bg-white'} ${
-                isScrolled ? 'text-white' : 'text-orange-500'
+              className={`px-4 py-2 ${isScrolled ? "bg-orange-500" : "bg-white"} ${
+                isScrolled ? "text-white" : "text-orange-500"
               } rounded-full hover:bg-orange-600 hover:text-white transition`}
             >
               {translations[language].toggleLanguage}
@@ -226,9 +264,9 @@ const Home = () => {
       {/* Hero Section */}
       <section id="home" ref={heroRef} className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="/Website_Food Pictures/Restaurant pictures/Extrior 1.jpeg" 
-            alt="Restaurant interior" 
+          <img
+            src="/Website_Food Pictures/Restaurant pictures/Extrior 1.jpeg"
+            alt="Restaurant interior"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
@@ -237,21 +275,13 @@ const Home = () => {
           <div className="px-4 space-y-8 scale-up">
             <div className="relative inline-block">
               <Sparkles className="absolute -top-8 -left-8 w-6 h-6 text-orange-400 floating" />
-              <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
-                {translations[language].title}
-              </h1>
-              <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
-                {translations[language].title2}
-              </h1>
+              <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">{translations[language].title}</h1>
+              <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">{translations[language].title2}</h1>
               <Sparkles className="absolute -bottom-8 -right-8 w-6 h-6 text-orange-400 floating" />
             </div>
-            <p className="text-xl md:text-3xl text-white mb-8 font-light">
-              {translations[language].subtitle}
-            </p>
-            <button 
-              className="bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group"
-            >
-              <a href='/menu'>{translations[language].explore}</a>
+            <p className="text-xl md:text-3xl text-white mb-8 font-light">{translations[language].subtitle}</p>
+            <button className="bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group">
+              <a href="/menu">{translations[language].explore}</a>
               <ChevronDown className="ml-2 group-hover:translate-y-1 transition-transform duration-300" />
             </button>
           </div>
@@ -276,26 +306,34 @@ const Home = () => {
             </div>
             <p className="text-gray-600 text-lg">{translations[language].enjoyHome}</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <a href="https://www.ubereats.com/jp-en/store/north-park-indian-restaurant-%26-cafe-%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%8F%E3%83%BC%E3%82%AF-%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%82%A2%E3%83%B3%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%26%E3%82%AB%E3%83%95%E3%82%A7/6H00l28aSHKV5y8Miga5ig?diningMode=PICKUP" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up">
-              <img src="https://1000logos.net/wp-content/uploads/2020/08/Uber-Eats-Logo-2018.jpg" 
-                   alt="Uber Eats" 
-                   className="w-62 h-36 object-contain mx-auto mb-4"/>
+            <a
+              href="https://www.ubereats.com/jp-en/store/north-park-indian-restaurant-%26-cafe-%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%8F%E3%83%BC%E3%82%AF-%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%82%A2%E3%83%B3%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%26%E3%82%AB%E3%83%95%E3%82%A7/6H00l28aSHKV5y8Miga5ig?diningMode=PICKUP"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up"
+            >
+              <img
+                src="https://1000logos.net/wp-content/uploads/2020/08/Uber-Eats-Logo-2018.jpg"
+                alt="Uber Eats"
+                className="w-62 h-36 object-contain mx-auto mb-4"
+              />
               <h3 className="text-xl font-bold text-center mb-2">Uber Eats</h3>
               <p className="text-gray-600 text-center">{translations[language].fastDelivery}</p>
             </a>
-            
-            <a href="https://demae-can.com/shop/menu/3392106" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-100">
-              <img src="https://vos.line-scdn.net/strapi-cluster-instance-bucket-84/1_62eaf29e06.png" 
-                   alt="Demae-can" 
-                   className="w-96 object-contain mx-auto mb-4"/>
+
+            <a
+              href="https://demae-can.com/shop/menu/3392106"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-100"
+            >
+              <img
+                src="https://vos.line-scdn.net/strapi-cluster-instance-bucket-84/1_62eaf29e06.png"
+                alt="Demae-can"
+                className="w-96 object-contain mx-auto mb-4"
+              />
               <h3 className="text-xl font-bold text-center mb-2">出前館</h3>
               <p className="text-gray-600 text-center">{translations[language].japanFavorite}</p>
             </a>
@@ -313,16 +351,16 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
             <div className="fade-in-left">
-              <img 
-                src="/Website_Food Pictures/Restaurant pictures/Exterior-1.jpg" 
-                alt="Restaurant ambiance" 
+              <img
+                src="/Website_Food Pictures/Restaurant pictures/Exterior-1.jpg"
+                alt="Restaurant ambiance"
                 className="rounded-3xl shadow-2xl"
               />
             </div>
             <div className="space-y-6 fade-in-right">
               <h3 className="text-3xl font-bold text-gray-800">{translations[language].fusionCultures}</h3>
               <p className="text-gray-600 leading-relaxed">{translations[language].para}</p>
-              <div className='w-32 p-2 flex justify-center items-center rounded-lg bg-orange-500 text-white hover:bg-white hover:text-orange-500 transition-all duration-300 hover:drop-shadow-2xl'>
+              <div className="w-32 p-2 flex justify-center items-center rounded-lg bg-orange-500 text-white hover:bg-white hover:text-orange-500 transition-all duration-300 hover:drop-shadow-2xl">
                 <a className="flex items-center justify-center font-semibold" href="/gallery">
                   {translations[language].exploreGallery}
                 </a>
@@ -381,13 +419,77 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Membership & Facilities Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6 fade-in-left">
+              <div className="inline-flex items-center space-x-3 mb-4">
+                <Award className="text-orange-600 w-8 h-8" />
+                <h2 className="text-3xl font-bold">{translations[language].membershipTitle}</h2>
+              </div>
+              <p className="text-gray-600 text-lg leading-relaxed">{translations[language].membershipText}</p>
+              <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm">
+                <div className="flex items-center space-x-4">
+                  <div className="p-3 bg-orange-100 rounded-full">
+                    <Heart className="text-orange-600 w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold">{translations[language].memberBenefits}</h4>
+                    <p className="text-gray-600">{translations[language].discountText}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="fade-in-right">
+              <img
+                src="/Website_Food Pictures/membership.jpg"
+                alt="Membership card"
+                className="rounded-3xl shadow-2xl"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="fade-in-left order-2 md:order-1">
+              <img
+                src="/Website_Food Pictures/parking.jpg"
+                alt="Restaurant interior"
+                className="rounded-3xl shadow-2xl"
+              />
+            </div>
+            <div className="space-y-6 fade-in-right order-1 md:order-2">
+              <div className="inline-flex items-center space-x-3 mb-4">
+                <Users className="text-orange-600 w-8 h-8" />
+                <h2 className="text-3xl font-bold">{translations[language].facilitiesTitle}</h2>
+              </div>
+              <p className="text-gray-600 text-lg leading-relaxed">{translations[language].facilitiesText}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm text-center">
+                  <h4 className="text-xl font-semibold mb-2">{translations[language].seatingCapacity}</h4>
+                  <p className="text-3xl font-bold text-orange-600">104</p>
+                </div>
+                <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm text-center">
+                  <h4 className="text-xl font-semibold mb-2">{translations[language].carParking}</h4>
+                  <p className="text-3xl font-bold text-orange-600">29</p>
+                </div>
+                <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm text-center flex flex-col items-center justify-center">
+                  <h4 className="text-xl font-semibold mb-2">{translations[language].halalFood}</h4>
+                  <Utensils className="text-orange-600 w-8 h-8" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 fade-in-up">
             {translations[language].connect}
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-orange-50 p-8 rounded-2xl shadow-lg fade-in-left transform hover:-translate-y-2 transition-all duration-300">
               <div className="flex items-center space-x-4 mb-6">
@@ -434,14 +536,14 @@ const Home = () => {
               <h3 className="text-2xl font-semibold mb-6">{translations[language].makeReservation}</h3>
               <p className="text-gray-600 mb-8">{translations[language].reservationText}</p>
               <div className="space-y-4">
-                <a 
+                <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeC4mHXyAx9o8_qDb3NJqEdak3LMcRwEM1mDyePUbACkrU1ow/viewform?usp=sharing"
                   className="w-full inline-flex items-center justify-center bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 group"
                 >
                   <Utensils className="mr-2 group-hover:rotate-12 transition-transform duration-300" />
                   {translations[language].bookTable}
                 </a>
-                <a 
+                <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeL3z_YVeW7pK59sjeUlggLANci2-wTJGhLUrRVZ_CONXk4lA/viewform?usp=sharing"
                   className="w-full inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 group"
                 >
@@ -457,34 +559,36 @@ const Home = () => {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-6 text-center scale-up">
-          <p className="text-2xl font-bold mb-4 gradient-text">{translations[language].title + translations[language].title2}</p>
+          <p className="text-2xl font-bold mb-4 gradient-text">
+            {translations[language].title + translations[language].title2}
+          </p>
           <p className="text-gray-400">{translations[language].footerText}</p>
           <div className="flex justify-center space-x-6 mt-8">
-            <a 
-              href="https://www.facebook.com/share/1FJh5xvfWj/?mibextid=wwXIfr" 
-              target="_blank" 
+            <a
+              href="https://www.facebook.com/share/1FJh5xvfWj/?mibextid=wwXIfr"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange-500 transition-colors duration-300"
             >
               <CiFacebook className="w-6 h-6" />
             </a>
-            <a 
-              href="https://www.instagram.com/northpark.indian?igsh=MXUxcWNxbno4MzFzMw==" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/northpark.indian?igsh=MXUxcWNxbno4MzFzMw=="
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange-500 transition-colors duration-300"
             >
               <FaInstagram className="w-6 h-6" />
             </a>
           </div>
-          <div className="mt-8 text-sm text-gray-400">
-            {translations[language].copyright}
-          </div>
-          Japanese content translated from English using advanced AI technology. In case of discrepancy, English text prevails.
+          <div className="mt-8 text-sm text-gray-400">{translations[language].copyright}</div>
+          Japanese content translated from English using advanced AI technology. In case of discrepancy, English text
+          prevails.
         </div>
       </footer>
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home
+
