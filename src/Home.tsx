@@ -341,6 +341,69 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6 fade-in-left">
+              <div className="inline-flex items-center space-x-3 mb-4">
+                <Award className="text-orange-600 w-8 h-8" />
+                <h2 className="text-3xl font-bold">{translations[language].membershipTitle}</h2>
+              </div>
+              <p className="text-gray-600 text-lg leading-relaxed">{translations[language].membershipText}</p>
+              <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm">
+                <div className="flex items-center space-x-4">
+                  <div className="p-3 bg-orange-100 rounded-full">
+                    <Heart className="text-orange-600 w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold">{translations[language].memberBenefits}</h4>
+                    <p className="text-gray-600">{translations[language].discountText}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="fade-in-right">
+              <img
+                src="/Website_Food Pictures/membership.jpg"
+                alt="Membership card"
+                className="rounded-3xl shadow-2xl"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="fade-in-left order-2 md:order-1">
+              <img
+                src="/Website_Food Pictures/parking.jpg"
+                alt="Restaurant interior"
+                className="rounded-3xl shadow-2xl"
+              />
+            </div>
+            <div className="space-y-6 fade-in-right order-1 md:order-2">
+              <div className="inline-flex items-center space-x-3 mb-4">
+                <Users className="text-orange-600 w-8 h-8" />
+                <h2 className="text-3xl font-bold">{translations[language].facilitiesTitle}</h2>
+              </div>
+              <p className="text-gray-600 text-lg leading-relaxed">{translations[language].facilitiesText}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm text-center">
+                  <h4 className="text-xl font-semibold mb-2">{translations[language].seatingCapacity}</h4>
+                  <p className="text-3xl font-bold text-orange-600">104</p>
+                </div>
+                <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm text-center">
+                  <h4 className="text-xl font-semibold mb-2">{translations[language].carParking}</h4>
+                  <p className="text-3xl font-bold text-orange-600">29</p>
+                </div>
+                <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm text-center flex flex-col items-center justify-center">
+                  <h4 className="text-xl font-semibold mb-2">{translations[language].halalFood}</h4>
+                  <Utensils className="text-orange-600 w-8 h-8" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Us Section */}
       <section id="about" ref={aboutRef} className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
@@ -420,68 +483,7 @@ const Home = () => {
       </section>
 
       {/* Membership & Facilities Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6 fade-in-left">
-              <div className="inline-flex items-center space-x-3 mb-4">
-                <Award className="text-orange-600 w-8 h-8" />
-                <h2 className="text-3xl font-bold">{translations[language].membershipTitle}</h2>
-              </div>
-              <p className="text-gray-600 text-lg leading-relaxed">{translations[language].membershipText}</p>
-              <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm">
-                <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-orange-100 rounded-full">
-                    <Heart className="text-orange-600 w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold">{translations[language].memberBenefits}</h4>
-                    <p className="text-gray-600">{translations[language].discountText}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="fade-in-right">
-              <img
-                src="/Website_Food Pictures/membership.jpg"
-                alt="Membership card"
-                className="rounded-3xl shadow-2xl"
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="fade-in-left order-2 md:order-1">
-              <img
-                src="/Website_Food Pictures/parking.jpg"
-                alt="Restaurant interior"
-                className="rounded-3xl shadow-2xl"
-              />
-            </div>
-            <div className="space-y-6 fade-in-right order-1 md:order-2">
-              <div className="inline-flex items-center space-x-3 mb-4">
-                <Users className="text-orange-600 w-8 h-8" />
-                <h2 className="text-3xl font-bold">{translations[language].facilitiesTitle}</h2>
-              </div>
-              <p className="text-gray-600 text-lg leading-relaxed">{translations[language].facilitiesText}</p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm text-center">
-                  <h4 className="text-xl font-semibold mb-2">{translations[language].seatingCapacity}</h4>
-                  <p className="text-3xl font-bold text-orange-600">104</p>
-                </div>
-                <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm text-center">
-                  <h4 className="text-xl font-semibold mb-2">{translations[language].carParking}</h4>
-                  <p className="text-3xl font-bold text-orange-600">29</p>
-                </div>
-                <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm text-center flex flex-col items-center justify-center">
-                  <h4 className="text-xl font-semibold mb-2">{translations[language].halalFood}</h4>
-                  <Utensils className="text-orange-600 w-8 h-8" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-white">
