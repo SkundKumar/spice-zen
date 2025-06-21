@@ -122,3 +122,17 @@ body {
 .animate-bounce {
   animation: bounce 1.5s infinite;
 }
+
+/* Custom styles for GloriaFood buttons */
+.glf-button, .glf-button.reservation {
+  border-radius: 9999px !important;
+}
+
+.glf-button.reservation {
+  background-image: none !important;
+  color: #222 !important;
+}
+
+.glf-button.reservation:hover {
+  color: #222 !important;
+}

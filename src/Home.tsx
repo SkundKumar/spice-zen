@@ -14,6 +14,8 @@ import {
   Award,
   Users,
   Truck,
+  ClipboardList,
+  CalendarPlus,
 } from "lucide-react"
 import { CiFacebook } from "react-icons/ci"
 import { FaInstagram } from "react-icons/fa"
@@ -22,9 +24,22 @@ const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
   const [showScrollIndicator, setShowScrollIndicator] = useState(true)
-  const [language, setLanguage] = useState("en")
-  const heroRef = useRef(null)
-  const aboutRef = useRef(null)
+  const [language, setLanguage] = useState<"en" | "jp">("en")
+  const heroRef = useRef<HTMLElement>(null)
+  const aboutRef = useRef<HTMLElement>(null)
+
+  // Load language from localStorage on initial render
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language")
+    if (savedLanguage === "en" || savedLanguage === "jp") {
+      setLanguage(savedLanguage)
+    }
+  }, [])
+
+  // Save language to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("language", language)
+  }, [language])
 
   const translations = {
     en: {
@@ -46,6 +61,12 @@ const Home = () => {
       enjoyHome: "Enjoy our delicious meals from the comfort of your home",
       fastDelivery: "Fast delivery to your doorstep",
       japanFavorite: "Japan's favorite delivery service",
+      ourExclusiveDelivery: "Our Exclusive Delivery Service",
+      otherServices: "Other Services",
+      seeMenuAndOrder: "See MENU & Order",
+      tableReservation: "Table Reservation",
+      orderOnlineDescription: "Browse our full menu and place your order online for fast delivery.",
+      reserveTableDescription: "Book a table in advance to guarantee your spot.",
       ourStory: "Our Story",
       storySubtitle: "A journey of flavors, tradition, and innovation",
       fusionCultures: "A Fusion of Cultures",
@@ -99,6 +120,12 @@ const Home = () => {
       enjoyHome: "ご自宅で本格的なインド料理をお楽しみください",
       fastDelivery: "迅速なお届けサービス",
       japanFavorite: "日本で人気の出前サービス",
+      ourExclusiveDelivery: "当店の特別配達サービス",
+      otherServices: "その他のサービス",
+      seeMenuAndOrder: "メニューを見て注文",
+      tableReservation: "席を予約する",
+      orderOnlineDescription: "フルメニューを閲覧し、オンラインでご注文ください。",
+      reserveTableDescription: "事前にテーブルを予約して、お席を確保してください。",
       ourStory: "私たちのストーリー",
       storySubtitle: "伝統と革新の味わいの旅",
       fusionCultures: "文化の融合",
@@ -130,11 +157,25 @@ const Home = () => {
       carParking: "駐車場",
       halalFood: "ハラールフード",
     },
-  }
+  } as const;
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === "jp" ? "en" : "jp"))
   }
+
+  useEffect(() => {
+    // GloriaFood script
+    const script = document.createElement("script")
+    script.src = "https://www.fbgcdn.com/embedder/js/ewm2.js"
+    script.defer = true
+    script.async = true
+    document.body.appendChild(script)
+
+    return () => {
+      // Clean up the script when the component unmounts
+      document.body.removeChild(script)
+    }
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -172,8 +213,8 @@ const Home = () => {
       threshold: 0.1,
     }
 
-    const handleIntersect = (entries) => {
-      entries.forEach((entry) => {
+    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry: IntersectionObserverEntry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible")
         }
@@ -192,7 +233,7 @@ const Home = () => {
     }
   }, [])
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     element?.scrollIntoView({ behavior: "smooth" })
   }
@@ -297,7 +338,7 @@ const Home = () => {
       </section>
 
       {/* Delivery Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gray-50" id="delivery">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12 fade-in-up">
             <div className="inline-flex items-center space-x-3 mb-4">
@@ -307,36 +348,76 @@ const Home = () => {
             <p className="text-gray-600 text-lg">{translations[language].enjoyHome}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <a
-              href="https://www.ubereats.com/jp-en/store/north-park-indian-restaurant-%26-cafe-%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%8F%E3%83%BC%E3%82%AF-%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%82%A2%E3%83%B3%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%26%E3%82%AB%E3%83%95%E3%82%A7/6H00l28aSHKV5y8Miga5ig?diningMode=PICKUP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up"
-            >
-              <img
-                src="https://1000logos.net/wp-content/uploads/2020/08/Uber-Eats-Logo-2018.jpg"
-                alt="Uber Eats"
-                className="w-62 h-36 object-contain mx-auto mb-4"
-              />
-              <h3 className="text-xl font-bold text-center mb-2">Uber Eats</h3>
-              <p className="text-gray-600 text-center">{translations[language].fastDelivery}</p>
-            </a>
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Main Delivery Service */}
+            <div className="w-full md:w-[70%] border border-solid-black bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up">
+              <h3 className="text-2xl font-bold text-center mb-6">{translations[language].ourExclusiveDelivery}</h3>
+              <div className="grid md:grid-cols-2 gap-6 text-center">
+                
+                {/* Order Online Module */}
+                <div className="p-6 bg-orange-50 rounded-xl hover:bg-orange-100 transition-all duration-300 flex flex-col justify-between">
+                  <div>
+                    <div className="p-3 bg-white rounded-full w-fit mx-auto mb-4 shadow-md">
+                      <ClipboardList className="text-orange-600 w-8 h-8" />
+                    </div>
+                    <p className="text-gray-600 mb-4 mt-14 text-xl">{translations[language].orderOnlineDescription}</p>
+                  </div>
+                  <span className="glf-button w-full" data-glf-cuid="c5f5e731-d79c-4e53-8885-e853965e6130" data-glf-ruid="4e841748-478d-4acd-9c96-17ec51c110e4 ">{translations[language].seeMenuAndOrder}</span>
+                </div>
 
-            <a
-              href="https://demae-can.com/shop/menu/3392106"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-100"
-            >
-              <img
-                src="https://vos.line-scdn.net/strapi-cluster-instance-bucket-84/1_62eaf29e06.png"
-                alt="Demae-can"
-                className="w-96 object-contain mx-auto mb-4"
-              />
-              <h3 className="text-xl font-bold text-center mb-2">出前館</h3>
-              <p className="text-gray-600 text-center">{translations[language].japanFavorite}</p>
-            </a>
+                {/* Table Reservation Module */}
+                <div className="p-6 bg-orange-400 text-white rounded-xl h-96 hover:bg-orange-500 transition-all duration-300 flex flex-col justify-between">
+                  <div>
+                    <div className="p-3 bg-white rounded-full w-fit mx-auto mb-4 shadow-md">
+                      <CalendarPlus className="text-gray-800 w-8 h-8" />
+                    </div>
+                    <p className="text-gray-800 mb-4 mt-14 text-xl">{translations[language].reserveTableDescription}</p>
+                  </div>
+                  <span className="glf-button !bg-orange-100 reservation w-full " data-glf-cuid="c5f5e731-d79c-4e53-8885-e853965e6130" data-glf-ruid="4e841748-478d-4acd-9c96-17ec51c110e4" data-glf-reservation="true">{translations[language].tableReservation}</span>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Other Services */}
+            <div className="w-full md:w-[30%]">
+              <div className="h-full flex flex-col">
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-semibold text-gray-700">{translations[language].otherServices}</h3>
+                  <div className="w-16 h-px bg-gray-300 mx-auto mt-2"></div>
+                </div>
+                <div className="flex-grow grid grid-rows-2 gap-4">
+                  <a
+                    href="https://www.ubereats.com/jp-en/store/north-park-indian-restaurant-%26-cafe-%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%8F%E3%83%BC%E3%82%AF-%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%82%A2%E3%83%B3%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%26%E3%82%AB%E3%83%95%E3%82%A7/6H00l28aSHKV5y8Miga5ig?diningMode=PICKUP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-center items-center"
+                  >
+                    <img
+                      src="https://1000logos.net/wp-content/uploads/2020/08/Uber-Eats-Logo-2018.jpg"
+                      alt="Uber Eats"
+                      className="w-48 h-24 object-contain mx-auto mb-2"
+                    />
+                    <h4 className="text-lg font-bold text-center">Uber Eats</h4>
+                    <p className="text-gray-600 text-center text-sm">{translations[language].fastDelivery}</p>
+                  </a>
+                  <a
+                    href="https://demae-can.com/shop/menu/3268803"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-center items-center"
+                  >
+                    <img
+                      src="https://cdn.demae-can.com/static-assets/images/header/logo-demae-can.svg"
+                      alt="Demae-can"
+                      className="w-48 h-24 object-contain mx-auto mb-2"
+                    />
+                    <h4 className="text-lg font-bold text-center mb-1">出前館</h4>
+                    <p className="text-gray-600 text-center text-sm">{translations[language].japanFavorite}</p>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -401,6 +482,20 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Promotional Image Section */}
+      <section className="py-10 bg-white">
+        <div className="container flex justify-center mx-auto px-6">
+          <img
+            src={language === 'en' 
+              ? '/Website_Food Pictures/Party & Catering_Eng.jpg' 
+              : '/Website_Food Pictures/Party & Catering_jpn.jpg'
+            }
+            alt="Promotional Banner for Parties and Catering"
+            className="w-full/3  h-auto object-cover rounded-2xl shadow-lg"
+          />
         </div>
       </section>
 
