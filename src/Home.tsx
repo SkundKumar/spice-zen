@@ -89,17 +89,16 @@ const Home = () => {
       sendInquiry: "Send Inquiry",
       footerText: "The Authentic taste of Indian",
       copyright: "© 2025 North Park, Indian Restaurant & Café. All rights reserved.",
-      membershipTitle: "Membership Program",
-      membershipText:
-        "Join our exclusive membership program! Request a Member Card from our staff during your next visit and enjoy an exclusive 5% discount every time you dine in.",
-      memberBenefits: "Member Benefits",
-      discountText: "5% discount on all dine-in orders",
       facilitiesTitle: "Our Facilities",
       facilitiesText:
         "Spacious dining meets hassle-free parking! Our large dining space and free parking make group dining more convenient than ever.",
       seatingCapacity: "Seating Capacity",
       carParking: "Car Parking",
       halalFood: "Halal Food",
+      freeDeliveryService: "Free food delivery service*",
+      conditionsApply: "conditions apply",
+      deliveryCondition: "* Free delivery available only within 2km on orders over ¥2,000.",
+      contactForDelivery: "Contact us for out-of-area delivery",
     },
     jp: {
       title: "ノースパーク、",
@@ -145,17 +144,16 @@ const Home = () => {
       sendInquiry: "お問い合わせ",
       footerText: "インドの本場の味",
       copyright: "© 2025 ノースパーク インド料理レストラン＆カフェ. All rights reserved.",
-      membershipTitle: "メンバーシッププログラム",
-      membershipText:
-        "特別なメンバーシッププログラムにご参加ください！次回のご来店時にスタッフにメンバーカードをリクエストいただくと、ご来店のたびに5％の割引をお楽しみいただけます。",
-      memberBenefits: "会員特典",
-      discountText: "店内でのご注文すべてに5％割引",
       facilitiesTitle: "施設情報",
       facilitiesText:
         "広々とした食事スペースと便利な駐車場！広いダイニングスペースと無料駐車場で、グループでのお食事がより便利になりました。",
       seatingCapacity: "座席数",
       carParking: "駐車場",
       halalFood: "ハラールフード",
+      freeDeliveryService: "無料フードデリバリーサービス*",
+      conditionsApply: "条件が適用されます",
+      deliveryCondition: "* 2,000円以上の注文で2km以内は配達無料。",
+      contactForDelivery: "エリア外の配達についてはお問い合わせください",
     },
   } as const;
 
@@ -350,9 +348,12 @@ const Home = () => {
 
           <div className="flex flex-col md:flex-row gap-8">
             {/* Main Delivery Service */}
-            <div className="w-full md:w-[70%] border border-solid-black bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up">
-              <h3 className="text-2xl font-bold text-center mb-6">{translations[language].ourExclusiveDelivery}</h3>
-              <div className="grid md:grid-cols-2 gap-6 text-center">
+            <div className="w-full md:w-[70%] bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up flex flex-col">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold">{translations[language].freeDeliveryService}</h3>
+                <p className="text-xs text-gray-400 italic mt-1">{translations[language].conditionsApply}</p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6 text-center flex-grow">
                 
                 {/* Order Online Module */}
                 <div className="p-6 bg-orange-50 rounded-xl hover:bg-orange-100 transition-all duration-300 flex flex-col justify-between">
@@ -376,6 +377,10 @@ const Home = () => {
                   <span className="glf-button !bg-orange-100 reservation w-full " data-glf-cuid="c5f5e731-d79c-4e53-8885-e853965e6130" data-glf-ruid="4e841748-478d-4acd-9c96-17ec51c110e4" data-glf-reservation="true">{translations[language].tableReservation}</span>
                 </div>
 
+              </div>
+              <div className="text-center mt-6">
+                <p className="text-xs text-gray-500">{translations[language].deliveryCondition}</p>
+                <p className="text-sm font-semibold text-gray-700 mt-2">{translations[language].contactForDelivery}</p>
               </div>
             </div>
 
@@ -424,34 +429,6 @@ const Home = () => {
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6 fade-in-left">
-              <div className="inline-flex items-center space-x-3 mb-4">
-                <Award className="text-orange-600 w-8 h-8" />
-                <h2 className="text-3xl font-bold">{translations[language].membershipTitle}</h2>
-              </div>
-              <p className="text-gray-600 text-lg leading-relaxed">{translations[language].membershipText}</p>
-              <div className="p-6 bg-orange-50 rounded-xl border border-orange-100 shadow-sm">
-                <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-orange-100 rounded-full">
-                    <Heart className="text-orange-600 w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold">{translations[language].memberBenefits}</h4>
-                    <p className="text-gray-600">{translations[language].discountText}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="fade-in-right">
-              <img
-                src="/Website_Food Pictures/membership.jpg"
-                alt="Membership card"
-                className="rounded-3xl shadow-2xl"
-              />
-            </div>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="fade-in-left order-2 md:order-1">
               <img
